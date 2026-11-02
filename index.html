@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IPUL Ensenada y Tijuana | IPUL Ensenada and Tijuana</title>
+<meta name="description" content="IPUL Ensenada y Tijuana: dos iglesias en Baja California, un solo mensaje, Jesucristo. Horarios, direcciones y un versículo cada día. IPUL Ensenada and Tijuana: two churches in Baja California, one message, Jesus Christ. Service times, addresses and a verse each day.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="alternate" hreflang="en" href="https://ipulbaja.org/en/">
+<link rel="alternate" hreflang="es" href="https://ipulbaja.org/es/">
+<link rel="alternate" hreflang="x-default" href="https://ipulbaja.org/">
+<link rel="icon" href="./media/icon-32.png" sizes="32x32" type="image/png">
+<script>
+(function () {
+  var lang = null;
+  try { lang = window.localStorage.getItem('ipul-lang'); } catch (e) {}
+  if (lang !== 'en' && lang !== 'es') {
+    lang = null;
+    var prefs = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || ''];
+    for (var i = 0; i < prefs.length && !lang; i++) {
+      var p = String(prefs[i]).toLowerCase();
+      if (p.indexOf('es') === 0) lang = 'es';
+      else if (p.indexOf('en') === 0) lang = 'en';
+    }
+  }
+  window.location.replace((lang || 'es') + '/');
+})();
+</script>
+<noscript><meta http-equiv="refresh" content="0; url=es/"></noscript>
+<style>body{font:1.125rem/1.5 system-ui,sans-serif;margin:2rem;color:#1B3337}a{color:#076A49}</style>
+</head>
+<body>
+<p><a href="./es/" lang="es">Español</a> · <a href="./en/" lang="en">English</a></p>
+</body>
+</html>

@@ -1,0 +1,1439 @@
+/* IPUL Ensenada and Tijuana
+   Colors from the IPUL México logo (brief 7.1). Contrast on white:
+   green 6.6, dark green 12.2, red 5.8, slate 13.3. Light green and the
+   band colors are decoration only. */
+
+@font-face { font-family: "Alegreya"; src: url("../fonts/alegreya-latin-wght-normal.woff2") format("woff2"); font-weight: 400 900; font-style: normal; font-display: swap; }
+@font-face { font-family: "Alegreya"; src: url("../fonts/alegreya-latin-wght-italic.woff2") format("woff2"); font-weight: 400 900; font-style: italic; font-display: swap; }
+@font-face { font-family: "Alegreya Sans"; src: url("../fonts/alegreya-sans-latin-400-normal.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Alegreya Sans"; src: url("../fonts/alegreya-sans-latin-400-italic.woff2") format("woff2"); font-weight: 400; font-style: italic; font-display: swap; }
+@font-face { font-family: "Alegreya Sans"; src: url("../fonts/alegreya-sans-latin-700-normal.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: swap; }
+
+:root {
+  --green: #076A49;
+  --green-dark: #093E21;
+  --flag-green: #007026;
+  --green-light: #66A256;   /* decoration only */
+  --red: #CB1025;
+  --red-deep: #750708;
+  --red-light: #CA3E3E;
+  --slate: #1B3337;
+  --paper: #FFFFFF;
+  --stone: #EDEDEB;
+  --mint: #D7E8DE;          /* text on dark green: 10.6:1 */
+  --wash: #EAF3EE;          /* light hover surface */
+
+  --serif: "Alegreya", Georgia, "Times New Roman", serif;
+  --sans: "Alegreya Sans", "Segoe UI", system-ui, -apple-system, sans-serif;
+
+  --gutter: clamp(1rem, 4vw, 2rem);
+  --prose: 38rem;          /* about 70 characters a line */
+  --notes: 19rem;          /* the verse column beside the text, wide screens */
+  --notes-gap: 3rem;
+  --text-and-notes: calc(var(--prose) + var(--notes-gap) + var(--notes));
+  --wide: 76rem;
+  --shadow: 0 1rem 2.5rem rgb(9 62 33 / 0.16);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+body {
+  margin: 0;
+  font-family: var(--sans);
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: var(--slate);
+  background: var(--paper);
+  overflow-wrap: break-word;
+}
+img, video, svg { max-width: 100%; }
+img { display: block; height: auto; }
+h1, h2, h3 {
+  font-family: var(--serif);
+  font-weight: 800;
+  line-height: 1.12;
+  color: var(--green-dark);
+  text-wrap: balance;
+  margin: 0 0 0.6em;
+}
+h1 { font-size: clamp(2.25rem, 1.6rem + 2.4vw, 3.5rem); letter-spacing: -0.01em; }
+h2 { font-size: clamp(1.75rem, 1.45rem + 1.2vw, 2.25rem); }
+h3 { font-size: clamp(1.375rem, 1.25rem + 0.5vw, 1.625rem); }
+p, ul, ol { margin: 0 0 1em; }
+a { color: var(--green); text-decoration-thickness: 0.08em; text-underline-offset: 0.18em; }
+a:hover { color: var(--green-dark); text-decoration-thickness: 0.14em; }
+:focus-visible { outline: 3px solid var(--red); outline-offset: 3px; }
+main:focus { outline: none; }
+strong, b { font-weight: 700; }
+.icon { flex: none; }
+.defs { position: absolute; width: 0; height: 0; overflow: hidden; }
+
+/* ---------- Skip link and review notice ---------- */
+.skip-link {
+  position: absolute; left: 0.5rem; top: -10rem; z-index: 100;
+  background: var(--green-dark); color: #fff; padding: 0.75rem 1rem; font-weight: 700;
+}
+.skip-link:focus { top: 0.5rem; outline-color: #fff; }
+.preview-note {
+  margin: 0; padding: 0.35rem var(--gutter); text-align: center;
+  font-size: 0.875rem; background: var(--stone); color: var(--slate);
+}
+
+/* ---------- Header ---------- */
+.site-header { background: var(--paper); position: relative; z-index: 10; }
+.site-header__bar {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-areas: "brand menu" "lang wa";
+  align-items: center;
+  gap: 0.25rem 1rem;
+  max-width: var(--wide); margin: 0 auto; padding: 0.5rem var(--gutter) 0.375rem;
+}
+.site-header__tools { display: contents; }
+.brand { grid-area: brand; display: flex; align-items: center; gap: 0.625rem; text-decoration: none; color: var(--green-dark); min-width: 0; }
+.brand:hover { color: var(--green); }
+.brand__logo { height: 44px; width: auto; }
+.brand__name { font-family: var(--serif); font-weight: 800; font-size: 1.1875rem; line-height: 1.08; max-width: 9.5em; }
+/* The name as on the churches' wall banner (Charles, October 26): "Ipul
+   México" in serif small capitals, "Ensenada – Tijuana" below it in green. */
+.brand__name { display: flex; flex-direction: column; max-width: none; }
+.brand__mark { font-variant-caps: small-caps; letter-spacing: 0.03em; font-weight: 700; white-space: nowrap; }
+.brand__place { font-family: var(--sans); font-weight: 700; font-size: 0.72em; line-height: 1.25; letter-spacing: 0.01em; color: var(--green); white-space: nowrap; }
+.lang-switch { grid-area: lang; margin: 0; font-size: 1rem; display: flex; gap: 0.4rem; align-items: center; }
+.lang-switch [aria-current] { font-weight: 700; }
+/* The languages show as EN / ES on every screen; the full names stay for
+   screen readers (Charles, October 30). */
+.lang-name { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; }
+/* A small flag beside the language being shown (Charles, October 26): the
+   United States flag for English, the Mexican flag for Spanish. Decorative
+   (empty alt); the language name stays the label. Artwork: flag-icons
+   (MIT), see GENERATED_ASSETS.md. */
+.lang-switch [aria-current] { display: inline-flex; align-items: center; gap: 0.4rem; }
+.lang-flag { width: 24px; height: 18px; border-radius: 2px; box-shadow: 0 0 0 1px rgb(0 0 0 / 0.15); flex: none; }
+/* The other language, as a link, in regular weight; the current one stays
+   bold with its flag (Charles, October 29). */
+.lang-switch a { display: inline-flex; align-items: center; min-height: 44px; padding: 0 0.25rem; font-weight: 400; }
+.header-wa { grid-area: wa; justify-self: end; }
+.menu-toggle {
+  grid-area: menu; justify-self: end; display: none;
+  align-items: center; gap: 0.5rem; min-height: 44px; padding: 0.5rem 0.875rem;
+  font: 700 1rem/1 var(--sans); color: var(--green-dark); background: var(--paper);
+  border: 2px solid var(--green-dark); border-radius: 0.375rem; cursor: pointer;
+}
+.menu-toggle__bars, .menu-toggle__bars::before, .menu-toggle__bars::after {
+  display: block; width: 18px; height: 2px; background: currentColor; position: relative;
+}
+.menu-toggle__bars::before, .menu-toggle__bars::after { content: ""; position: absolute; left: 0; }
+.menu-toggle__bars::before { top: -6px; }
+.menu-toggle__bars::after { top: 6px; }
+.js .menu-toggle { display: inline-flex; }
+
+/* Navigation: without JavaScript the list is always shown. */
+.site-nav { border-top: 1px solid var(--stone); }
+.site-nav__list { list-style: none; margin: 0 auto; max-width: var(--wide); padding: 0.25rem var(--gutter); display: flex; flex-wrap: wrap; gap: 0 1.25rem; }
+.site-nav a, .sub-toggle {
+  display: flex; align-items: center; gap: 0.35rem; min-height: 48px;
+  font: 700 1.0625rem/1.2 var(--sans); color: var(--slate); text-decoration: none;
+  border-bottom: 3px solid transparent;
+}
+.site-nav a:hover, .sub-toggle:hover { color: var(--green); }
+.site-nav a[aria-current="page"] { color: var(--green-dark); border-bottom-color: var(--red); }
+.sub-toggle { display: none; background: none; border-top: 0; border-left: 0; border-right: 0; padding: 0; cursor: pointer; }
+.has-sub { display: flex; flex-wrap: wrap; align-items: center; gap: 0 0.75rem; }
+.sub-label { font-weight: 700; color: var(--slate); }
+.sub-label::after { content: ":"; }
+.sub { list-style: none; margin: 0; padding: 0; display: flex; gap: 0 0.75rem; }
+/* Icons beside the top-level items show in the phone menu only. */
+.nav-icon, .nav-note, .lang-switch--menu { display: none; }
+/* On a church page, the "Our churches" button carries the current-page mark. */
+.has-sub.is-current .sub-toggle { color: var(--green-dark); border-bottom-color: var(--red); }
+
+/* Tablets: everything on one row. */
+@media (min-width: 48rem) {
+  .site-header__bar { grid-template-columns: 1fr auto auto auto; grid-template-areas: "brand lang wa menu"; gap: 1rem; padding-top: 0.75rem; padding-bottom: 0.75rem; }
+}
+
+/* Phones and tablets: the menu is a panel that slides in from the right
+   edge, below the bar, over a dimmed page (Charles, October 30). site.js
+   sets --menu-top to the bottom of the bar; tapping the dimmed page closes
+   it. Hidden, it is also out of the keyboard order. The panel is fixed to
+   the screen, so while hidden beside it the page does not scroll sideways;
+   no ancestor clips it (Safari cut it off when the bar clipped overflow). */
+@media (max-width: 59.99rem) {
+  .js .site-header__main { position: relative; z-index: 2; }
+  .js .site-nav {
+    position: fixed; top: var(--menu-top, 0px); bottom: 0; right: 0; width: min(22rem, 86%);
+    overflow-y: auto; overscroll-behavior: contain;
+    background: var(--paper); box-shadow: -10px 0 24px rgb(9 62 33 / 0.18);
+    transform: translateX(100%); visibility: hidden;
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), visibility 0s linear 0.35s;
+  }
+  .js .site-header.is-open .site-nav { transform: none; visibility: visible; transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1); }
+  .js .site-header::after {
+    content: ""; position: fixed; inset: 0; z-index: 1; background: rgb(9 30 20 / 0.4);
+    opacity: 0; visibility: hidden; transition: opacity 0.35s, visibility 0s linear 0.35s;
+  }
+  .js .site-header.is-open::after { opacity: 1; visibility: visible; transition: opacity 0.35s; }
+  @media (prefers-reduced-motion: reduce) {
+    .js .site-nav, .js .site-header.is-open .site-nav, .js .site-header::after, .js .site-header.is-open::after { transition: none; }
+  }
+  .js .site-nav__list { flex-direction: column; padding-bottom: 0.75rem; }
+  .js .site-nav__list > li { border-bottom: 1px solid var(--stone); }
+  /* Nested menus (Our Churches, About Us) start closed and open in place
+     when their row is tapped; site.js marks the open one .is-expanded
+     (Charles, October 30). Only these rows end in a chevron: pointing
+     right while closed, turning down while open. */
+  .js .has-sub { display: grid; grid-template-rows: auto 0fr; align-items: stretch; align-content: start; transition: grid-template-rows 0.35s cubic-bezier(0.4, 0, 0.2, 1); }
+  .js .has-sub.is-expanded { grid-template-rows: auto 1fr; }
+  .js .sub-toggle { display: flex; width: 100%; text-align: left; }
+  .js .sub-toggle__chev, .js .sub-label { display: none; }
+  /* An icon before each top-level item, in green (Charles, October 30). */
+  .js .nav-icon { display: block; flex: none; margin-right: 0.5rem; color: var(--green); }
+  /* Under each top-level item, a short line about it in regular weight. */
+  .js .nav-note { display: block; margin-top: 0.125rem; font: 400 0.9375rem/1.3 var(--sans); color: #56676A; }
+  .js .site-nav__list > li > a, .js .sub-toggle { padding-top: 0.5rem; padding-bottom: 0.5rem; }
+  /* Nested items line up with the label of the item above, past its icon. */
+  .js .sub {
+    flex-direction: column; flex-wrap: nowrap; padding: 0 0 0 calc(22px + 0.5rem + 0.35rem); min-height: 0; overflow: hidden;
+    opacity: 0; visibility: hidden; transition: opacity 0.35s, visibility 0s linear 0.35s;
+  }
+  .js .has-sub.is-expanded .sub { opacity: 1; visibility: visible; transition: opacity 0.35s; }
+  .js .sub li:last-child { padding-bottom: 0.5rem; }
+  /* The open list clips what lies outside it, so its focus ring sits inside. */
+  .js .sub a:focus-visible { outline-offset: -3px; }
+  .js .sub-toggle::after {
+    content: ""; flex: none; width: 0.5rem; height: 0.5rem; margin: 0 0.375rem 0 auto;
+    border-right: 2px solid currentColor; border-bottom: 2px solid currentColor;
+    transform: rotate(-45deg); transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .js .sub-toggle[aria-expanded="true"]::after { transform: rotate(45deg); }
+  /* The language switch at the bottom of the panel (Charles, October 30). */
+  .js .site-nav { display: flex; flex-direction: column; }
+  .js .site-nav__list { margin: 0; }
+  .js .lang-switch--menu { display: flex; margin: auto 0 0; padding: 0.5rem var(--gutter) 1.25rem; border-top: 1px solid var(--stone); font-size: 1.0625rem; }
+  .js .lang-switch--menu a { min-height: 44px; border-bottom: 0; font-weight: 400; color: var(--green); text-decoration: underline; }
+  @media (prefers-reduced-motion: reduce) {
+    .js .has-sub, .js .sub, .js .has-sub.is-expanded .sub, .js .sub-toggle::after { transition: none; }
+  }
+}
+
+@media (min-width: 60rem) {
+  .site-header__bar { grid-template-columns: 1fr auto auto; grid-template-areas: "brand lang wa"; gap: 1.5rem; padding-top: 0.5rem; padding-bottom: 0.5rem; }
+  .brand__logo { height: 50px; }
+  .site-nav a, .sub-toggle { min-height: 44px; }
+  .brand__name { font-size: 1.375rem; max-width: none; }
+  .js .menu-toggle { display: none; }
+  .js .sub-toggle { display: flex; }
+  .js .sub-label { display: none; }
+  .js .has-sub { position: relative; display: block; }
+  .js .sub {
+    display: none; position: absolute; top: 100%; left: -1rem; min-width: 12rem;
+    flex-direction: column; padding: 0.5rem 0; background: var(--paper);
+    border-top: 3px solid var(--green); box-shadow: var(--shadow); z-index: 20;
+  }
+  .js .sub-toggle[aria-expanded="true"] + .sub-label + .sub { display: flex; }
+  .js .sub a { padding: 0 1rem; border-bottom: 0; }
+  .js .sub a[aria-current="page"] { box-shadow: inset 4px 0 0 var(--red); }
+  .sub-toggle__chev { transition: transform 0.15s; }
+  .sub-toggle[aria-expanded="true"] .sub-toggle__chev { transform: rotate(180deg); }
+}
+
+/* Service times bar: on every page, on the first screen. */
+.times-bar { background: var(--green-dark); color: #fff; }
+.times-bar p {
+  max-width: var(--wide); margin: 0 auto; padding: 0.5rem var(--gutter);
+  font-size: 0.9375rem; line-height: 1.45; display: flex; flex-wrap: wrap; gap: 0.1rem 1.25rem;
+}
+.times-bar__label { color: var(--mint); font-weight: 700; }
+/* The label as a small tag; a thin line between the churches; a dot
+   between the days (Charles, October 26). Screen readers skip the dot and
+   hear a comma instead; a line can break after a dot. */
+.times-bar p { align-items: center; }
+.times-bar__label {
+  background: var(--mint); color: var(--green-dark); border-radius: 999px;
+  padding: 0.05rem 0.7rem; font-size: 0.875rem; line-height: 1.6;
+}
+.times-bar__day, .times-bar__lead { white-space: nowrap; }
+.times-bar__sep { font-weight: 700; color: var(--mint); margin-right: 0.15em; }
+@media (min-width: 40rem) {
+  .times-bar.is-one-row .times-bar__church + .times-bar__church { border-left: 1px solid rgb(255 255 255 / 0.4); padding-left: 1.25rem; }
+}
+.times-bar a { color: #fff; font-weight: 700; }
+.times-bar :focus-visible { outline-color: #fff; }
+/* On phones the church names say what the line is; the label stays for
+   screen readers and saves a line on the first screen. */
+@media (max-width: 39.99rem) {
+  .times-bar__label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; }
+}
+
+/* ---------- Buttons and links ---------- */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+  min-height: 48px; padding: 0.75rem 1.25rem; border-radius: 0.375rem; border: 2px solid transparent;
+  font: 700 1.0625rem/1.2 var(--sans); text-decoration: none; text-align: center; cursor: pointer;
+}
+.btn:hover { text-decoration: none; }
+.btn--primary { background: var(--red); color: #fff; }
+.btn--primary:hover { background: var(--red-deep); color: #fff; }
+.btn--whatsapp { background: var(--green); color: #fff; }
+.btn--whatsapp:hover { background: var(--green-dark); color: #fff; }
+.btn--outline { background: var(--paper); color: var(--green); border-color: var(--green); }
+.btn--outline:hover { background: var(--wash); color: var(--green-dark); }
+.btn--sm { min-height: 44px; padding: 0.5rem 0.875rem; font-size: 1rem; }
+.btn--lg { min-height: 58px; padding: 1rem 2.25rem; font-size: 1.3125rem; }
+.actions { margin: 1.5rem 0; }
+@media (prefers-reduced-motion: no-preference) {
+  .btn, .signpost, .site-nav a { transition: background-color 0.15s, color 0.15s, border-color 0.15s; }
+}
+
+/* ---------- Bands from the logo ---------- */
+.swoosh { display: block; width: 100%; }
+.sw-green { fill: var(--flag-green); }
+.sw-white { fill: #fff; }
+.sw-red { fill: url(#swoosh-red); }
+.swoosh--hero .sw-end, .swoosh--hero-wide .sw-end { fill: var(--paper); }
+.swoosh--band .sw-end, .swoosh--footer .sw-end { fill: var(--green-dark); }
+
+/* ---------- Home: hero ---------- */
+/* The photo is the Tijuana congregation seen from behind. Faces to keep
+   clear of the panel: women at the far left (first 5% of the width, 44-59%
+   down), a woman in profile (23-27% across, 50-54% down), the preacher
+   facing the camera (58-61% across, 41-47% down) and a man at the right
+   edge (93-100% across, 39-48% down). Nothing below 60% is a face. */
+
+/* Phones and tablets: the photo runs edge to edge at its own 4:3 shape and
+   the translucent panel overlaps its lower 38% (below every face). */
+.hero__frame { display: grid; grid-template-areas: "media" "card"; }
+.hero__backdrop, .swoosh--hero-wide { display: none; }
+.hero__media { grid-area: media; position: relative; aspect-ratio: 4 / 3; overflow: hidden; background: var(--stone); }
+.hero__picture, .hero__picture img { width: 100%; height: 100%; }
+.hero__picture img { object-fit: cover; object-position: var(--hero-focus-phone, 50% 55%); }
+.swoosh--hero { position: absolute; left: 0; right: 0; bottom: -1px; height: clamp(34px, 8vw, 84px); display: none; }
+.hero__card {
+  grid-area: card; position: relative; z-index: 1;
+  margin: -28.5vw var(--gutter) 0; padding: 1.25rem;
+  background: rgb(255 255 255 / 0.88);
+  -webkit-backdrop-filter: blur(14px) saturate(1.15); backdrop-filter: blur(14px) saturate(1.15);
+  box-shadow: var(--shadow); border-top: 5px solid var(--green);
+}
+.hero__card h1 { font-size: clamp(1.75rem, 1.1rem + 2.9vw, 3.25rem); line-height: 1.06; margin-bottom: 0.4em; }
+.hero__sub { font-size: 1.125rem; line-height: 1.45; margin-bottom: 1rem; }
+.hero__actions { display: flex; flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+.quiet-link { display: inline-flex; align-items: flex-start; gap: 0.5rem; min-height: 44px; padding: 0.55rem 0; font-size: 1.0625rem; line-height: 1.4; font-weight: 700; }
+.quiet-link .icon { margin-top: 0.1rem; }
+/* Visitors who ask for less transparency get a solid panel. */
+@media (prefers-reduced-transparency: reduce) {
+  .hero__card { background: var(--paper); -webkit-backdrop-filter: none; backdrop-filter: none; }
+}
+/* Small phones (under 400 px): slightly smaller type so the long Spanish
+   headline still leaves "Visítanos" on the first screen. */
+@media (max-width: 24.99rem) {
+  .site-header__bar { padding-top: 0.375rem; padding-bottom: 0.25rem; }
+  .brand__logo { height: 40px; }
+  .brand__name { font-size: 1.125rem; }
+  .hero__card { padding-top: 1rem; }
+  .hero__card h1 { font-size: 1.625rem; }
+  .hero__sub { font-size: 1.0625rem; margin-bottom: 0.75rem; }
+}
+@media (min-width: 40rem) {
+  .swoosh--hero { display: block; }
+  .hero__card { margin-left: auto; margin-right: auto; width: calc(100% - 2 * var(--gutter)); max-width: 36rem; padding: 2rem 2.25rem 2.25rem; }
+  .hero__sub { font-size: 1.25rem; margin-bottom: 1.25rem; }
+  .hero__actions { gap: 1rem; }
+}
+
+/* Wide screens: the photo keeps one 16:9 framing at every width, the
+   framing that shows everyone's head, so widening the window never crops
+   heads. It is as wide as the screen until it would be taller than the space
+   below the header; past that, a darkened, blurred copy of the same photo
+   fills the sides, and "Visit us" stays on the first screen.
+   A wide, low panel sits over the lower part of the photo. Every face is
+   above 60% of the photo's height, so the panel covers only backs and
+   chairs. The check in the review notes measures this at many sizes. */
+@media (min-width: 60rem) {
+  .hero { position: relative; overflow: hidden; background: var(--green-dark); }
+  .hero__backdrop { display: block; position: absolute; inset: 0; }
+  .hero__backdrop picture, .hero__backdrop img { display: block; width: 100%; height: 100%; }
+  .hero__backdrop img { object-fit: cover; object-position: var(--hero-focus, 50% 90%); filter: blur(24px) brightness(0.7) saturate(1.1); transform: scale(1.12); }
+  .hero__frame {
+    position: relative; grid-template-areas: "stack"; aspect-ratio: 16 / 9;
+    width: min(100%, max(60.45rem, calc((100svh - 10rem) * 16 / 9))); margin-inline: auto;
+  }
+  .hero__media { grid-area: stack; aspect-ratio: auto; }
+  .hero__picture { position: absolute; inset: 0; }
+  .hero__picture img { object-position: var(--hero-focus, 50% 90%); }
+  .swoosh--hero { display: none; }
+  .swoosh--hero-wide { display: block; position: absolute; left: 0; right: 0; bottom: -1px; z-index: 2; height: clamp(34px, 5vw, 96px); pointer-events: none; }
+  .hero__card {
+    grid-area: stack; align-self: end; justify-self: start; z-index: 3;
+    width: min(62rem, 86%); max-width: none;
+    margin: 2rem 0 2.5rem 7%; padding: 1.75rem 2.25rem 1.75rem;
+    background: rgb(255 255 255 / 0.85);
+  }
+  .hero__card h1 { font-size: clamp(2.25rem, 0.9rem + 2.3vw, 3.25rem); margin-bottom: 0.3em; }
+  .hero__sub { margin-bottom: 1rem; }
+  .hero__actions { flex-direction: row; flex-wrap: wrap; align-items: center; gap: 0.75rem 1.75rem; }
+}
+/* Short wide screens (laptops): a more compact panel keeps it below the faces. */
+@media (min-width: 60rem) and (max-height: 47.5rem) {
+  .hero__card { width: 88%; padding: 1.25rem 2rem 1.25rem; margin-bottom: 2rem; }
+  .hero__card h1 { font-size: 2rem; }
+  .hero__sub { margin-bottom: 0.75rem; }
+}
+
+/* ---------- Home: sections ---------- */
+.home-churches { background: var(--stone); padding: 3rem var(--gutter) 3.5rem; margin-top: 3rem; }
+.home-churches > h2, .church-cards { max-width: var(--wide); margin-left: auto; margin-right: auto; }
+.church-cards { display: grid; gap: 1.5rem; }
+/* I'm New stacks its two cards, so each street map gets the column's width. */
+@media (min-width: 48rem) { .church-cards { grid-template-columns: 1fr 1fr; } }
+/* Home, phones: a tab per church, one card shown at a time (the script
+   shows the tabs and hides the other card; October 29). */
+.church-tabs:not([hidden]) { position: relative; display: grid; grid-template-columns: 1fr 1fr; border: 2px solid var(--green); border-radius: 999px; padding: 3px; background: var(--paper); }
+/* The green pill behind the chosen tab slides across when the other tab is
+   chosen (Charles, October 29); the script sets data-active. */
+.church-tabs::before { content: ""; position: absolute; top: 3px; bottom: 3px; left: 3px; width: calc(50% - 3px); border-radius: 999px; background: var(--green); transition: translate 0.35s cubic-bezier(0.4, 0, 0.2, 1); }
+.church-tabs[data-active="1"]::before { translate: 100% 0; }
+.church-tabs button { position: relative; font: inherit; font-size: 1.125rem; font-weight: 700; color: var(--green-dark); background: none; border: 0; border-radius: 999px; padding: 0.625rem 0.5rem; min-height: 2.75rem; cursor: pointer; transition: color 0.35s; }
+.church-tabs button[aria-selected="true"] { color: #fff; }
+/* The newly chosen church's card fades in while the pill slides, at the
+   same speed, on top of the card it replaces: both cards share one grid
+   cell, and the script hides the old one when the fade ends, so the page
+   behind never shows through (Charles, October 29). */
+.church-cards.is-tabbed > .church-card { grid-area: 2 / 1; }
+@keyframes church-card-in { from { opacity: 0; } to { opacity: 1; } }
+.church-card.is-entering, .church-panels .section.is-entering { position: relative; z-index: 1; animation: church-card-in 0.35s cubic-bezier(0.4, 0, 0.2, 1); }
+@media (prefers-reduced-motion: reduce) {
+  .church-tabs::before, .church-tabs button { transition: none; }
+  .church-card.is-entering, .church-panels .section.is-entering { animation: none; }
+}
+/* Contact page: the two church sections as tabs on every screen (Charles,
+   October 31), with the same pill and fade. The section shown sits on a
+   white card, like a tab's page. */
+.church-panels { display: grid; margin-top: 2.5rem; }
+.church-panels > .church-tabs { max-width: 26rem; width: 100%; margin: 0 auto 0.25rem; }
+.church-panels.is-tabbed > .section { grid-area: 2 / 1; background: var(--paper); }
+.church-panels > .section[hidden] { display: none; }
+/* High-contrast modes drop the pill's color; an outline marks the chosen tab. */
+@media (forced-colors: active) {
+  .church-tabs::before { display: none; }
+  .church-tabs button[aria-selected="true"] { outline: 2px solid CanvasText; outline-offset: -2px; }
+}
+.church-cards.is-tabbed { gap: 1rem; }
+.church-card[hidden] { display: none; }
+.church-card { background: var(--paper); display: flex; flex-direction: column; }
+/* Flush with the card's edges: the general photo spacing (.photo, later in
+   this file) left a white strip above and below (Charles, October 29). */
+.church-card .church-card__photo { margin: 0; }
+.church-card__photo img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
+.church-card__body { padding: 1.5rem 1.5rem 1.75rem; flex: 1; display: flex; flex-direction: column; }
+/* The map and the address with its button sit at the foot of the card, so
+   the two cards line up side by side. */
+.church-card .map { margin: auto 0 1rem; padding-top: 0.25rem; max-width: none; }
+.church-card__directions { margin-top: auto; display: flex; flex-wrap: wrap; align-items: center; align-content: start; gap: 0.75rem 1.25rem; }
+.church-card .map + .church-card__directions { margin-top: 0; }
+.church-card__directions .church-card__address { margin: 0; }
+/* Side by side, the two cards share their rows, so the maps and addresses
+   line up even when one address or schedule runs longer. Home cards: photo,
+   then name, language, times, map, directions. */
+@media (min-width: 48rem) {
+  @supports (grid-template-rows: subgrid) {
+    .church-cards { row-gap: 0; }
+    .church-card, .church-card > .church-card__body { display: grid; grid-template-rows: subgrid; }
+    .church-card { grid-row: span 6; }
+    .church-card > .church-card__body { grid-row: span 5; }
+    /* I'm New: name, photo, then map, directions, language, times. */
+    .church-card--head-first { grid-row: span 6; }
+    .church-card--head-first > .church-card__body { grid-row: span 4; }
+    /* ...and a photo inside the church last, the two lined up. */
+    .church-card--with-inside { grid-row: span 7; }
+  }
+}
+.church-card h3 { font-size: 1.875rem; margin-bottom: 0.25rem; }
+.church-card h3 a { color: var(--green-dark); text-decoration: none; }
+.church-card h3 a:hover { text-decoration: underline; }
+.church-card__lang { font-style: italic; margin-bottom: 1rem; }
+.church-card__address { display: flex; gap: 0.5rem; align-items: flex-start; }
+.church-card__address .icon { color: var(--green); margin-top: 0.2rem; }
+/* I'm New: the same cards inside a page section, side by side and wider than
+   the text column, with an edge to stand off the white page (October 29). */
+.church-cards--visit { margin-bottom: 2rem; }
+.church-cards--visit .church-card { border: 1px solid var(--stone); }
+/* The church name above the building photo, as the card's header. */
+.church-card__head { padding: 1.25rem 1.5rem 1rem; }
+.church-card__head h3 { margin-bottom: 0; }
+.church-card--head-first .church-card__body { padding-top: 1.25rem; }
+/* Their map sits right under the photo and the times come last. */
+.church-card--head-first .map { margin-top: 0; padding-top: 0; }
+.church-card--head-first .church-card__directions { margin-top: 0; }
+.church-card--head-first .church-card__lang { margin: 1.5rem 0 0.75rem; }
+.church-card--head-first .schedule { margin: 0; }
+@media (min-width: 48rem) {
+  .section > .church-cards--visit { width: min(60rem, 100vw - 2 * var(--gutter)); max-width: none; margin-left: 50%; translate: -50% 0; }
+}
+
+.schedule { list-style: none; padding: 0; margin: 0 0 1.25rem; }
+.schedule li { display: flex; flex-wrap: wrap; gap: 0 0.75rem; padding: 0.5rem 0; border-top: 1px solid var(--stone); }
+.schedule li:last-child { border-bottom: 1px solid var(--stone); }
+.schedule .when { min-width: 9.5rem; }
+.schedule-text { list-style: none; padding: 0; }
+.schedule-text li { padding: 0.625rem 0 0.625rem 1rem; border-left: 4px solid var(--red); margin-bottom: 0.5rem; background: var(--stone); }
+.schedule-text .when { font-weight: 700; margin-right: 0.35rem; }
+
+.home-message { background: var(--green-dark); color: #fff; }
+.swoosh--band { height: clamp(36px, 7vw, 90px); background: var(--stone); }
+.home-message__inner { max-width: 48rem; margin: 0 auto; padding: 1.5rem var(--gutter) 3.5rem; }
+.home-message h2 { color: #fff; }
+.home-message a { color: #fff; }
+.home-message :focus-visible { outline-color: #fff; }
+.tagline { font-family: var(--serif); font-style: italic; font-weight: 700; line-height: 1.04; margin: 1.5rem 0; }
+.home-message .tagline { font-size: clamp(2.5rem, 1.5rem + 4.6vw, 4.75rem); color: #fff; text-wrap: balance; }
+.tagline__ref { display: block; margin-top: 0.75rem; font: 700 1rem/1.3 var(--sans); color: var(--mint); font-style: normal; }
+.home-message .verse blockquote::before { color: var(--green-light); }
+.home-message .verse figcaption { color: var(--mint); }
+
+.home-start { max-width: var(--wide); margin: 0 auto; padding: 3.5rem var(--gutter) 1rem; }
+/* Next steps: a signpost list, one ruled row per step. */
+.signposts { list-style: none; padding: 0; margin: 0; border-top: 2px solid var(--green-dark); }
+.signposts li { border-bottom: 1px solid var(--stone); }
+.signpost { display: grid; gap: 0.2rem; padding: 1.125rem 0.75rem; text-decoration: none; color: var(--slate); }
+.signpost__title {
+  font: 800 clamp(1.5rem, 1.25rem + 1vw, 2rem)/1.15 var(--serif); color: var(--green-dark);
+  text-decoration: underline; text-decoration-color: transparent; text-decoration-thickness: 0.06em; text-underline-offset: 0.16em;
+}
+.signpost:hover, .signpost:focus-visible { background: var(--wash); color: var(--slate); box-shadow: inset 4px 0 0 var(--red); }
+.signpost:hover .signpost__title { text-decoration-color: currentColor; }
+@media (min-width: 48rem) {
+  .signpost { grid-template-columns: minmax(14rem, 24rem) 1fr; align-items: baseline; gap: 2rem; padding: 1.375rem 1.25rem; }
+  .signpost__text { font-size: 1.1875rem; }
+}
+
+.home-pastor {
+  max-width: var(--wide); margin: 0 auto; padding: 2.5rem var(--gutter);
+  display: grid; gap: 1.5rem; align-items: start;
+}
+@media (min-width: 48rem) { .home-pastor { grid-template-columns: 14rem minmax(0, 40rem); gap: 2.5rem; } }
+.signature { font: italic 700 1.375rem/1.3 var(--serif); color: var(--green); }
+
+/* Watercolor background generated with Higgsfield, approved by Charles
+   (October 24; see GENERATED_ASSETS.md). The reference uses the darker
+   green so it stays readable over the wash's darkest patches. */
+/* A full-width band: the watercolor runs edge to edge, the verse stays in a
+   40rem reading column in the middle. No red stripe: the hero's swoosh
+   right above it already carries the red. */
+.home-verse {
+  margin: 0; padding: 2.25rem max(var(--gutter), calc((100% - 40rem) / 2)) 2rem;
+  background: var(--stone) url(decor/verse-watercolor.webp) center / cover no-repeat;
+  /* Light veil over the painted scenes: strongest behind the verse, lighter
+     at the far sides so the scenery shows. Phones: even, as the text spans
+     the whole width. */
+  --veil: linear-gradient(rgb(251 249 242 / 0.8), rgb(251 249 242 / 0.8));
+}
+@media (min-width: 48rem) {
+  .home-verse { --veil: linear-gradient(90deg, rgb(251 249 242 / 0.3), rgb(251 249 242 / 0.82) 24%, rgb(251 249 242 / 0.82) 76%, rgb(251 249 242 / 0.3)); }
+}
+/* One background per verse, in turn (data/pages.yaml verse_backgrounds).
+   Painted with Higgsfield, approved by Charles (October 24). The position
+   picks the slice of each painting that shows best in the short band. */
+.home-verse[data-bg="mountains"] { background-image: var(--veil), url(decor/verse-mountains.webp); background-position: center, 50% 38%; }
+.home-verse[data-bg="beach"] { background-image: var(--veil), url(decor/verse-beach.webp); background-position: center, 50% 45%; }
+.home-verse[data-bg="rays"] { background-image: var(--veil), url(decor/verse-rays.webp); background-position: center, 50% 42%; }
+.home-verse[data-bg="hills"] { background-image: var(--veil), url(decor/verse-hills.webp); background-position: center, 50% 52%; }
+.home-verse[data-bg="lake"] { background-image: var(--veil), url(decor/verse-lake.webp); background-position: center, 50% 48%; }
+/* Dramatic paintings (Charles, October 31), under the same veil: the verse
+   stays at 7.9:1 or better and the heading and reference at 7.2:1 or
+   better over the darkest patch of each. */
+.home-verse[data-bg="storm-sea"] { background-image: var(--veil), url(decor/verse-storm-sea.webp); background-position: center, 50% 55%; }
+.home-verse[data-bg="desert"] { background-image: var(--veil), url(decor/verse-desert.webp); background-position: center, 50% 45%; }
+.home-verse[data-bg="waves"] { background-image: var(--veil), url(decor/verse-waves.webp); background-position: center, 50% 55%; }
+.home-verse[data-bg="light"] { background-image: var(--veil), url(decor/verse-light.webp); background-position: center, 50% 55%; }
+.home-verse[data-bg="sunrise"] { background-image: var(--veil), url(decor/verse-sunrise.webp); background-position: center, 50% 45%; }
+.home-verse[data-bg="night"] { background-image: var(--veil), url(decor/verse-night.webp); background-position: center, 50% 60%; }
+.home-verse[data-bg] { background-size: cover; background-repeat: no-repeat; }
+@media (min-width: 48rem) { .home-verse { padding-top: 2.75rem; padding-bottom: 2.5rem; } }
+.home-verse + .home-churches { margin-top: 0; }
+.verse--daily blockquote { font-size: 1.375rem; }
+.verse.verse--daily figcaption { color: var(--green-dark); }
+
+.photo-strip { display: grid; gap: 4px; }
+.photo-strip .photo { margin: 0; max-width: none; }
+.photo-strip img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+@media (min-width: 48rem) { .photo-strip { grid-template-columns: repeat(3, 1fr); } }
+
+/* ---------- Interior pages ---------- */
+/* Page heading on a stone band; a hero photo overlaps its lower edge,
+   echoing the home page. */
+.page-head { background: var(--stone); padding: 2.5rem var(--gutter) 2rem; }
+.page-head__inner { max-width: var(--prose); margin: 0 auto; }
+.page-head__inner > p { font-size: 1.25rem; line-height: 1.5; }
+.page-head__inner > :last-child { margin-bottom: 0; }
+.page-head--with-hero { padding-bottom: 4.5rem; }
+.page-head--with-hero + .photo--hero { position: relative; margin-top: -3rem; }
+.page-head .ph-image { background: var(--paper); }
+.page-body {
+  display: grid;
+  grid-template-columns: [full-start] minmax(var(--gutter), 1fr) [prose-start] minmax(0, var(--prose)) [prose-end] minmax(var(--gutter), 1fr) [full-end];
+  padding-bottom: 1rem;
+}
+.page-body > * { grid-column: prose; }
+/* Church pages: service times and the address beside the street map, and
+   the photos below, both wider than the text column (Charles, October 29).
+   Narrower screens stack them: times, address and button, map, photos. */
+.page-body > .when-where, .page-body > .mosaic { grid-column: full; width: min(60rem, 100% - 2 * var(--gutter)); margin-left: auto; margin-right: auto; }
+.when-where__text > .section:first-child { margin-top: 0; }
+/* Stacked (narrower screens): the address and its button, the map, then
+   the service times, so the map stays with the address. */
+@media (max-width: 59.99rem) {
+  .when-where { display: flex; flex-direction: column; }
+  .when-where__text { display: contents; }
+  .when-where .section--place { order: 1; }
+  .when-where__map { order: 2; }
+  .when-where__text > .section:not(.section--place) { order: 3; }
+}
+.when-where { margin-top: 2.5rem; }
+@media (max-width: 59.99rem) { .page-body > .when-where { width: auto; grid-column: prose; } }
+@media (min-width: 60rem) {
+  .when-where { display: grid; grid-template-columns: minmax(0, 1fr) 34rem; gap: 3rem; align-items: center; }
+  .when-where .map { margin: 0; }
+}
+.page-body > .gallery--end { grid-column: full; width: min(64rem, 100% - 2 * var(--gutter)); margin-left: auto; margin-right: auto; }
+.section { margin-top: 2.5rem; }
+.section > h2, .section > h3 { display: flex; align-items: center; gap: 0.6rem; }
+.section--sub { margin-top: 1.75rem; }
+.page-body ul:not([class]) { padding-left: 1.25rem; }
+.page-body ul:not([class]) li { margin-bottom: 0.5rem; }
+.page-body ul:not([class]) li::marker { color: var(--green); }
+/* Numbered steps (October 28): bold green numbers, a little room between. */
+.page-body ol:not([class]) { padding-left: 1.75rem; }
+.page-body ol:not([class]) li { margin-bottom: 0.5rem; padding-left: 0.25rem; }
+.page-body ol:not([class]) li::marker { color: var(--green); font-weight: 800; }
+/* What We Believe and Baptism (Charles, October 31): each step's number in
+   a green circle the size of the icons in "Who Jesus is". */
+.page--what-we-believe .page-body ol:not([class]),
+.page--baptism .page-body ol:not([class]) { list-style: none; padding-left: 0; counter-reset: step; }
+.page--what-we-believe .page-body ol:not([class]) > li,
+.page--baptism .page-body ol:not([class]) > li {
+  counter-increment: step; display: flex; align-items: center; gap: 0.75rem;
+  margin-bottom: 0.75rem; padding-left: 0;
+}
+.page--what-we-believe .page-body ol:not([class]) > li::before,
+.page--baptism .page-body ol:not([class]) > li::before {
+  content: counter(step); flex: none; display: grid; place-items: center;
+  width: 2.5rem; height: 2.5rem; border-radius: 50%;
+  background: var(--green); color: #fff; font-weight: 800; font-size: 1.125rem;
+}
+@media (max-width: 29.99rem) {
+  .page--what-we-believe .page-body ol:not([class]) > li::before,
+  .page--baptism .page-body ol:not([class]) > li::before { width: 2.25rem; height: 2.25rem; font-size: 1rem; }
+}
+/* A list inside a numbered item (About, the third purpose; October 31). */
+.page-body ol:not([class]) li > ul { margin: 0.5rem 0 0; }
+/* About, "What we are here for" (layout purpose_cards, Charles, October 31):
+   a soft card per purpose, its icon in a green circle beside the text. */
+.purposes { list-style: none; padding: 0; margin: 1.5rem 0 0; display: grid; gap: 1rem; }
+.purpose {
+  display: grid; grid-template-columns: auto 1fr; gap: 1rem; align-items: start;
+  padding: 1.25rem 1.25rem 1.25rem 1rem; border-radius: 1rem;
+  background: var(--wash); border: 1px solid rgb(9 62 33 / 0.08);
+}
+.purpose__icon {
+  display: grid; place-items: center; width: 3.25rem; height: 3.25rem; border-radius: 50%;
+  background: var(--green); color: #fff;
+}
+.purpose__text { padding-top: 0.2rem; }
+.purpose__text > ul { margin: 0.5rem 0 0; }
+.purpose__text > ul li { margin-bottom: 0.4rem; }
+/* What We Believe, "Who Jesus is" (layout icon_tiles, October 31): a short
+   list two across, each item with its icon, floating on the page: no tile
+   behind them, so they stand apart from the verse boxes nearby (Charles). */
+.icon-tiles { list-style: none; padding: 0; margin: 1.25rem 0 1.75rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem 1.25rem; }
+.icon-tile {
+  display: flex; align-items: center; gap: 0.75rem; margin: 0;
+  font-weight: 700; line-height: 1.3; color: var(--green-dark);
+}
+.icon-tile__icon {
+  flex: none; display: grid; place-items: center; width: 2.5rem; height: 2.5rem; border-radius: 50%;
+  background: var(--green); color: #fff;
+}
+.icon-tile__icon svg { width: 22px; height: 22px; }
+@media (max-width: 29.99rem) {
+  .icon-tile { gap: 0.625rem; font-size: 0.9375rem; }
+  .icon-tile__icon { width: 2.25rem; height: 2.25rem; }
+  .icon-tile__icon svg { width: 20px; height: 20px; }
+}
+@media (max-width: 29.99rem) {
+  .purpose { gap: 0.75rem; padding: 1rem 1rem 1rem 0.875rem; }
+  .purpose__icon { width: 2.75rem; height: 2.75rem; }
+  .purpose__icon svg { width: 24px; height: 24px; }
+}
+
+/* One short line from the page, set large between two sections, like the
+   home page's tagline (data/emphasis.yaml). */
+.pull-line {
+  font-family: var(--serif); font-style: italic; font-weight: 700;
+  font-size: clamp(1.75rem, 1.15rem + 2.4vw, 2.75rem); line-height: 1.15;
+  color: var(--green-dark); text-align: center; text-wrap: balance;
+  max-width: 46rem; margin: 3.5rem auto 1rem; padding-top: 1.5rem; position: relative;
+}
+/* Wider than the text column, so most lines fit on one or two rows
+   (Charles, October 28). */
+.page-body > .pull-line { grid-column: full; width: min(46rem, 100% - 2 * var(--gutter)); }
+.pull-line::before {
+  content: ""; position: absolute; top: 0; left: 50%; width: 3.5rem; height: 4px; margin-left: -1.75rem;
+  border-radius: 2px; background: linear-gradient(90deg, var(--green) 0 50%, var(--red) 50% 100%);
+}
+
+.photo { margin: 1.5rem 0; }
+.photo img { width: 100%; }
+.photo--small { max-width: min(100%, 26rem); }
+.photo--portrait { max-width: min(100%, 24rem); }
+.photo--headshot { max-width: 14rem; overflow: hidden; }
+/* Temporary photo: a tighter view keeps the party decorations behind the
+   pastor mostly out of frame until the real head shot arrives. */
+.photo--headshot img { transform: scale(1.18); transform-origin: 50% 30%; }
+.photo--hero { max-width: 64rem; margin: 1.25rem auto 0; }
+@media (min-width: 64rem) { .photo--hero { padding: 0 var(--gutter); box-sizing: content-box; } }
+.photo-row { display: grid; gap: 0.75rem; margin: 1.5rem 0; align-items: start; }
+.photo-row .photo { margin: 0; max-width: none; }
+@media (min-width: 40rem) {
+  .photo-row--2 { grid-template-columns: 1fr 1fr; }
+  .photo-row--3 { grid-template-columns: repeat(3, 1fr); }
+}
+.gallery { columns: 2; column-gap: 0.5rem; margin: 2rem 0; }
+@media (min-width: 48rem) { .gallery { column-gap: 0.75rem; } }
+.gallery .photo { break-inside: avoid; margin: 0 0 0.75rem; max-width: none; }
+.video-row { display: flex; flex-wrap: wrap; gap: 1.25rem; justify-content: center; margin: 1.5rem 0 2rem; }
+.video { margin: 0; }
+.video--portrait { width: min(100%, 18rem); }
+.video--landscape { width: min(100%, 34rem); }
+.video video { display: block; width: 100%; height: auto; background: #000; }
+.video figcaption { font-size: 0.9375rem; line-height: 1.45; margin-top: 0.5rem; }
+
+/* Bible verses */
+.verse { margin: 1.75rem 0; }
+.verse blockquote {
+  position: relative; margin: 0; padding-left: 1.5rem;
+  font: italic 400 1.1875rem/1.55 var(--serif);
+}
+.verse blockquote::before {
+  content: "\201C"; position: absolute; left: -0.15rem; top: -0.4rem;
+  font: 700 3rem/1 var(--serif); color: var(--green-light);
+}
+.verse blockquote p { margin: 0 0 0.5em; }
+.verse figcaption { padding-left: 1.5rem; font-weight: 700; color: var(--green); font-size: 1rem; }
+.credit { max-width: var(--prose); margin: 2.5rem auto 0; padding: 1rem var(--gutter) 0; font-size: 0.875rem; line-height: 1.5; box-sizing: content-box; }
+
+/* Wide screens, pages with Bible quotes: the verses are the main reading,
+   so each one runs the full width of the content area, set large, below
+   (or above) the text it belongs with. The body text wraps at the same
+   width (Charles, October 24). On narrower screens the verses stay inline
+   as written. */
+@media (min-width: 68rem) {
+  .page--verses .page-head__inner { max-width: var(--text-and-notes); }
+  .page--verses .page-body {
+    grid-template-columns: [full-start] minmax(var(--gutter), 1fr) [prose-start] minmax(0, var(--text-and-notes)) [prose-end] minmax(var(--gutter), 1fr) [full-end];
+  }
+  .page--verses .photo--hero { max-width: var(--text-and-notes); }
+  .page--verses .passage { margin-bottom: 0.5rem; }
+  .page--verses .passage__verses .verse { margin: 2rem 0; }
+  /* Verses 20 px italic beside 19 px body text (set for all pages below):
+     they read as about the same size (italic looks smaller than upright). */
+  .page--verses .passage__verses blockquote { padding-left: 2.25rem; font-size: 1.25rem; line-height: 1.55; }
+  .page--verses .passage__verses blockquote::before { font-size: 3.5rem; top: -0.45rem; left: -0.1rem; }
+  .page--verses .passage__verses figcaption { padding-left: 2.25rem; font-size: 1rem; }
+  .page--verses .credit { max-width: var(--text-and-notes); }
+  /* Paragraphs, lists and verses wrap at the width of the other pages' text,
+     so each line is short enough to follow; photos and videos keep the full
+     width (Charles, October 28). Text set beside a photo keeps its own
+     column. */
+  .page--verses .section > :is(p, ul, ol, .passage), .page--verses .page-head__inner > p { max-width: var(--prose); }
+  /* A page with no photos beside its text: the reading column, headings
+     included, is centered under the photos. Pages with photos beside text
+     keep one left edge for every heading. */
+  .page--verses .page-body:not(:has(.section-split)) .section > :is(h2, h3, p, ul, ol, .passage) { margin-left: auto; margin-right: auto; }
+  .page--verses .page-body:not(:has(.section-split)) .section > :is(h2, h3) { max-width: var(--prose); }
+  .page--verses .page-body:not(:has(.section-split)) .section-links ul { justify-content: center; }
+}
+}
+
+/* Long pages on phones: a little tighter. */
+@media (max-width: 39.99rem) {
+  .page-head { padding: 1.75rem var(--gutter) 1.5rem; }
+  .page-head--with-hero { padding-bottom: 4rem; }
+  .section { margin-top: 2rem; }
+  .verse { margin: 1.25rem 0; }
+  .verse blockquote { font-size: 1.125rem; line-height: 1.5; }
+}
+
+/* Children's motif: the play sword */
+.sword-accent { width: auto; height: 1.6em; transform: rotate(-14deg); flex: none; }
+.sword-divider { display: flex; align-items: center; gap: 1rem; margin: 2.5rem 0; }
+.sword-divider::before, .sword-divider::after { content: ""; flex: 1; height: 2px; background: var(--stone); }
+.sword-divider img { width: 180px; height: auto; }
+/* A section with its photo beside the text: on wide screens the sword sits
+   under the text, without the lines, and the one closing the section is
+   hidden; narrower screens keep the one closing the section (lib/pages.js). */
+.section-split__text > .sword-divider { display: none; }
+@media (min-width: 60rem) {
+  .section-split__text > .sword-divider { display: flex; justify-content: center; margin: 2.75rem 0 0; }
+  .section-split__text > .sword-divider::before, .section-split__text > .sword-divider::after { content: none; }
+  .section-split ~ .sword-divider { display: none; }
+}
+
+/* ---------- Placeholders (review site only) ---------- */
+.ph { margin: 1.5rem 0; padding: 1rem 1.25rem; border: 2px dashed var(--red-light); background: #FFF6F6; font-size: 1rem; }
+.ph__label { color: var(--red-deep); margin-right: 0.35rem; }
+.pair { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; margin: 1rem 0 1.75rem; }
+@media (min-width: 40rem) { .pair { gap: 1rem; } }
+.ph-image {
+  margin: 0; aspect-ratio: 3 / 2; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.35rem;
+  background: var(--stone); color: var(--green-dark); font: 800 clamp(1.0625rem, 0.8rem + 1.2vw, 1.5rem)/1.2 var(--serif); text-align: center;
+}
+.ph-image .icon { width: 32px; height: 32px; color: var(--green); }
+.ph-image.ph { aspect-ratio: auto; min-height: 9rem; padding: 0.75rem; border: 2px dashed var(--red-light); }
+.ph-image .ph__note { font: 400 0.8125rem/1.35 var(--sans); color: var(--slate); max-width: 22rem; }
+
+/* ---------- Footer ---------- */
+.site-footer { background: var(--green-dark); color: #fff; margin-top: 3.5rem; }
+.swoosh--footer { height: clamp(36px, 7vw, 96px); background: var(--paper); }
+.site-footer__inner { max-width: var(--wide); margin: 0 auto; padding: 1rem var(--gutter) 3rem; }
+.site-footer a { color: #fff; }
+.site-footer a:hover { color: var(--mint); }
+.site-footer :focus-visible { outline-color: #fff; }
+.tagline--footer { font-size: clamp(1.75rem, 1.3rem + 2vw, 2.75rem); color: #fff; margin: 0 0 2rem; }
+.footer-churches { display: grid; gap: 2rem; }
+@media (min-width: 48rem) { .footer-churches { grid-template-columns: 1fr 1fr; gap: 3rem; } }
+.footer-church h2 { font-size: 1.625rem; color: #fff; margin-bottom: 0.25rem; }
+.footer-church h2 a { text-decoration: none; }
+.footer-church h2 a:hover { text-decoration: underline; }
+.footer-church p { margin-bottom: 0.5rem; }
+.footer-church__lang { font-style: italic; color: var(--mint); }
+.footer-actions { list-style: none; padding: 0; margin: 0.25rem 0 0; display: flex; flex-wrap: wrap; gap: 0 1.25rem; }
+.footer-actions a { display: inline-flex; align-items: center; min-height: 44px; font-weight: 700; }
+/* Footer contact icons (Charles, October 26): one beside the phone line and
+   each link, in the text color; the words stay. */
+.footer-actions a { gap: 0.45rem; }
+.footer-actions .icon, .footer-church__phone .icon { flex: none; width: 1.15rem; height: 1.15rem; }
+.footer-actions a span { text-decoration: underline; text-underline-offset: 0.2em; }
+.footer-actions a { text-decoration: none; }
+.footer-church__phone { display: flex; align-items: center; gap: 0.45rem; }
+.footer-church__phone .icon { color: var(--mint); }
+/* The address opens directions (Charles, October 26); its pin sits on the
+   first line when the address wraps. */
+.footer-church__address { align-items: flex-start; }
+.footer-church__address .icon { margin-top: 0.3em; }
+/* WhatsApp, Facebook and Instagram as icons only (Charles, October 26):
+   44 px round tap targets; screen readers hear the name. */
+.footer-actions { align-items: center; }
+.footer-actions__icon a {
+  width: 44px; height: 44px; justify-content: center; border-radius: 50%;
+  border: 1px solid rgb(255 255 255 / 0.35); transition: background 0.15s, border-color 0.15s;
+}
+.footer-actions__icon a:hover { background: rgb(255 255 255 / 0.12); border-color: var(--mint); }
+.footer-actions__icon .icon { width: 1.3rem; height: 1.3rem; }
+.footer-actions__icon + .footer-actions__icon { margin-left: -0.5rem; }
+.schedule--footer li { border-color: rgb(255 255 255 / 0.18) !important; }
+.footer-statement { margin: 2.5rem 0 1rem; font-size: 0.9375rem; color: var(--mint); max-width: 48rem; }
+.footer-links { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 0.25rem 1.5rem; }
+.footer-links a { display: inline-flex; min-height: 44px; align-items: center; font-weight: 700; }
+.lang-switch--footer { margin-top: 0.75rem; }
+.lang-switch--footer [aria-current] { color: #fff; }
+
+/* ---------- 404 ---------- */
+.not-found { max-width: 36rem; margin: 4rem auto; padding: 0 var(--gutter); font-size: 1.25rem; }
+.not-found__logo { margin-bottom: 1.5rem; }
+.not-found__line { font: inherit; color: inherit; margin: 0 0 1em; }
+
+/* Tall portrait photos never take over a row. */
+.photo-row .photo--portrait img, .photo--portrait img { max-height: 30rem; width: auto; max-width: 100%; }
+.photo-row .photo--portrait { justify-self: center; }
+
+/* ---------- Sticky header and back to top ---------- */
+/* Once the full header has scrolled away, site.js adds .is-stuck: the bar and
+   menu become a compact bar fixed to the top (the times bar stays in the
+   page), and the back-to-top button appears. Without JavaScript the header
+   simply scrolls with the page. */
+
+/* Anchors and keyboard focus stop below the compact bar, never under it. */
+html { scroll-padding-top: 4.5rem; }
+@media (min-width: 60rem) { html { scroll-padding-top: 7rem; } }
+@media (min-width: 82rem) { html { scroll-padding-top: 5rem; } }
+/* ...and below the page-title strip too, on pages that have one. */
+html:has(.bar-title) { scroll-padding-top: 6.75rem; }
+@media (min-width: 60rem) { html:has(.bar-title) { scroll-padding-top: 9.5rem; } }
+@media (min-width: 82rem) { html:has(.bar-title) { scroll-padding-top: 7.5rem; } }
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+
+.is-stuck .site-header__main {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 50;
+  background: var(--paper); box-shadow: 0 2px 14px rgb(9 62 33 / 0.16);
+}
+@media (prefers-reduced-motion: no-preference) {
+  .is-stuck .site-header__main { animation: bar-in 0.22s ease-out; }
+  @keyframes bar-in { from { transform: translateY(-100%); } to { transform: none; } }
+}
+/* Phones and tablets: one row, the logo and name, WhatsApp (with its
+   word), and the menu button as an icon (its word stays for screen
+   readers). The language switch is at the bottom of the menu panel and in
+   the footer (Charles, October 30). Without JavaScript there is no panel,
+   and the header keeps the switch. */
+@media (max-width: 59.99rem) {
+  .js .site-header__bar { grid-template-columns: auto 1fr auto auto; grid-template-areas: "brand . wa menu"; gap: 0.5rem; padding-top: 0.625rem; padding-bottom: 0.625rem; }
+  .js .lang-switch--header { display: none; }
+  .js .menu-toggle__label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; }
+  .js .menu-toggle { min-width: 44px; padding: 0.5rem 0.75rem; }
+}
+/* Phones under 375 px: a slightly smaller name; under 350 px the WhatsApp
+   button shows its icon only (screen readers hear its words). */
+@media (max-width: 23.43rem) {
+  .js .brand { gap: 0.5rem; }
+  .js .brand__logo { height: 40px; }
+  .js .brand__name { font-size: 1.0625rem; }
+  .js .header-wa { padding-left: 0.75rem; padding-right: 0.75rem; }
+}
+@media (max-width: 21.8rem) {
+  .js .header-wa__label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; }
+  .js .header-wa { min-width: 44px; padding: 0.5rem; }
+}
+.is-stuck .site-header__bar { padding-top: 0.375rem; padding-bottom: 0.375rem; }
+.is-stuck .brand__logo { height: 36px; }
+.is-stuck .brand__name { font-size: 1.0625rem; }
+
+/* The page's title in a strip under the compact bar, so a long page stays
+   named while it scrolls (phones, Charles, October 30; every screen,
+   October 31). Phones and tablets: right under the one-row bar. */
+.is-stuck .bar-title {
+  display: block; margin: 0; padding: 0.3rem var(--gutter) 0.35rem;
+  background: var(--wash); border-top: 1px solid rgb(9 62 33 / 0.1);
+  font-family: var(--serif); font-weight: 700; font-size: 1.25rem; line-height: 1.3; color: var(--green-dark);
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+/* Wider screens: along the bottom of the bar and menu, full width, its
+   words lined up with the logo and menu above. It hangs below the bar, so
+   the bar's own layout is untouched; the menu's dropdowns open over it. */
+@media (min-width: 60rem) {
+  .is-stuck .bar-title {
+    position: absolute; top: 100%; left: 0; right: 0;
+    padding-left: max(var(--gutter), calc((100% - var(--wide)) / 2 + var(--gutter)));
+    padding-right: max(var(--gutter), calc((100% - var(--wide)) / 2 + var(--gutter)));
+    box-shadow: 0 2px 14px rgb(9 62 33 / 0.16);
+  }
+}
+/* The short title (menu name) on phones and tablets; the page's whole
+   title on wide screens, where there is room (Charles, October 31). */
+.bar-title__full { display: none; }
+@media (min-width: 60rem) {
+  .bar-title__short { display: none; }
+  .bar-title__full { display: inline; }
+}
+.bar-title { display: none; }
+
+/* Very wide screens: logo, menu, language and WhatsApp on one row. */
+@media (min-width: 82rem) {
+  .is-stuck .site-header__main {
+    display: flex; align-items: center; gap: 1.25rem;
+    padding: 0.25rem max(var(--gutter), calc((100% - var(--wide)) / 2 + var(--gutter)));
+  }
+  .is-stuck .site-header__bar, .is-stuck .site-header__tools { display: contents; }
+  .is-stuck .brand { order: 1; }
+  .is-stuck .brand__name { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; }
+  .is-stuck .site-nav { order: 2; border-top: 0; margin-right: auto; }
+  .is-stuck .site-nav__list { padding: 0; margin: 0; max-width: none; }
+  .is-stuck .lang-switch { order: 3; }
+  .is-stuck .header-wa { order: 4; }
+}
+
+/* Back to top: shown and hidden together with the compact bar. Hidden, it is
+   also out of the keyboard order. */
+.to-top {
+  position: fixed; z-index: 40;
+  right: max(1rem, env(safe-area-inset-right)); bottom: max(1rem, env(safe-area-inset-bottom));
+  width: 48px; height: 48px; border-radius: 50%; display: grid; place-items: center;
+  background: var(--green); color: #fff; border: 2px solid #fff; box-shadow: var(--shadow);
+  opacity: 0; visibility: hidden; transition: opacity 0.2s, visibility 0s linear 0.2s;
+}
+.is-stuck .to-top { opacity: 1; visibility: visible; transition: opacity 0.2s; }
+.to-top:hover { background: var(--green-dark); color: #fff; }
+.to-top:focus-visible { outline: 3px solid var(--red); outline-offset: 3px; }
+@media (min-width: 60rem) { .to-top { right: 1.5rem; bottom: 1.5rem; width: 52px; height: 52px; } }
+@media print { .to-top { display: none; } .is-stuck .site-header__main { position: static; box-shadow: none; } }
+
+/* Text for screen readers only (for example, "opens in a new tab"). */
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; }
+
+/* ---------- Easier reading (trial on the Children page) ---------- */
+/* Links to the page's sections, at the top. */
+.section-links { margin: 1.75rem 0 0.5rem; }
+.section-links ul { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.section-links a {
+  display: inline-flex; align-items: center; min-height: 44px; padding: 0.5rem 1rem;
+  border: 2px solid var(--stone); border-radius: 999px; background: var(--paper);
+  font-weight: 700; color: var(--green-dark); text-decoration: none; line-height: 1.25;
+}
+.section-links a:hover { background: var(--wash); border-color: var(--wash); }
+
+/* A folded verse: its reference is the button; it opens in place. */
+.verse-fold { margin: 1.25rem 0 1.5rem; }
+.verse-fold > summary {
+  list-style: none; display: inline-flex; align-items: center; gap: 0.5rem;
+  min-height: 44px; padding: 0.5rem 1rem 0.5rem 0.75rem; cursor: pointer;
+  border: 2px solid var(--stone); border-radius: 999px; background: var(--paper);
+  font-weight: 700; color: var(--green); line-height: 1.25;
+}
+.verse-fold > summary::-webkit-details-marker { display: none; }
+.verse-fold > summary:hover { background: var(--wash); border-color: var(--wash); }
+.verse-fold[open] > summary { background: var(--wash); border-color: var(--wash); }
+.verse-fold__chev { flex: none; }
+.verse-fold[open] .verse-fold__chev { transform: rotate(180deg); }
+.verse-fold > .verse { margin-top: 1rem; }
+/* The reference already shows on the button. */
+.verse-fold > .verse > figcaption { display: none; }
+@media (prefers-reduced-motion: no-preference) { .verse-fold__chev { transition: transform 0.15s; } }
+
+/* Videos placed in a section sit at a comfortable size. */
+.photo-row > .video { max-width: 34rem; }
+.photo-row > .video--portrait { max-width: 18rem; }
+
+/* A folded verse showing its first line (fold style "line"). */
+.verse.is-folded { margin: 1.25rem 0 1.5rem; }
+.verse.is-folded blockquote p {
+  display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 1; line-clamp: 1; overflow: hidden;
+  -webkit-mask-image: linear-gradient(to right, #000 60%, transparent); mask-image: linear-gradient(to right, #000 60%, transparent);
+  cursor: pointer; margin: 0;
+}
+.verse[data-fold] figcaption { margin-top: 0.5rem; }
+
+/* The key phrase of a verse (data/emphasis.yaml), under a soft gold
+   highlighter stroke that reads on white and on the verses' green. */
+.verse__key {
+  background: linear-gradient(transparent 45%, rgb(242 196 72 / 0.55) 45%, rgb(242 196 72 / 0.55) 94%, transparent 94%);
+  color: inherit; padding: 0 0.08em;
+  -webkit-box-decoration-break: clone; box-decoration-break: clone;
+}
+/* A folded verse starts its preview at the key phrase: the words before it
+   are hidden from view (screen readers still read them) and an ellipsis
+   stands in for them. Opened, the verse reads in full. */
+.verse__more { display: none; }
+.verse.is-folded .verse__more { display: inline; }
+.verse.is-folded :is(.verse__lead, .verse__lead-p) {
+  position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap;
+}
+.verse-toggle {
+  display: inline-flex; align-items: center; gap: 0.5rem; min-height: 44px; padding: 0.5rem 1rem 0.5rem 0.75rem;
+  border: 2px solid var(--stone); border-radius: 999px; background: var(--paper); cursor: pointer;
+  font: 700 1rem/1.25 var(--sans); color: var(--green);
+}
+.verse-toggle:hover { border-color: var(--green); }
+.verse:not(.is-folded) .verse-toggle { border-color: var(--green); }
+.verse-toggle__chev { flex: none; }
+.verse:not(.is-folded) .verse-toggle__chev { transform: rotate(180deg); }
+@media (prefers-reduced-motion: no-preference) { .verse-toggle__chev { transition: transform 0.15s; } }
+
+/* Children page: photos and videos two side by side on phones, so the page
+   is shorter. A photo on its own shows smaller. */
+@media (max-width: 39.99rem) {
+  .page--children .photo-row--2, .page--children .video-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; }
+  .page--children .video-row > .video { width: auto; }
+  .page--children .photo-row > .video, .page--children .video-row > .video { max-width: none; }
+  .page--children .video figcaption { font-size: 0.8125rem; line-height: 1.35; }
+  .page--children .photo-row--1 .photo--portrait img { max-height: 20rem; }
+}
+
+/* A phone number never breaks across two lines. */
+a[href^="tel:"], a[href^="https://wa.me/"]:not(.btn):not(.quiet-link) { white-space: nowrap; }
+
+/* Children page, wide screens: section photos and videos use the full
+   content width (like the verses), not the narrower text column. */
+@media (min-width: 68rem) {
+  .page--children .section > .photo-row, .page--children .section > .gallery, .page--children .section > .video-row, .page--children .section > .sword-divider { max-width: none; }
+  .page--children .photo-row > .video { max-width: none; }
+  .page--children .video-row > .video--portrait { width: min(100%, 22rem); }
+}
+
+/* Children page, tablets and up: tall gallery photos sit side by side,
+   centered, with the same gap as the videos below them. */
+@media (min-width: 40rem) {
+  .page--children .gallery { columns: auto; display: flex; flex-wrap: wrap; justify-content: center; gap: 1.25rem; }
+  .page--children .gallery .photo { margin: 0; }
+  .page--children .gallery .photo--portrait { width: auto; }
+}
+
+/* Children page: a photo opens full screen when tapped. */
+.photo-zoom { display: block; width: 100%; padding: 0; border: 0; background: none; cursor: zoom-in; }
+.photo-zoom img { width: 100%; }
+dialog.lightbox {
+  width: 100vw; height: 100dvh; max-width: 100vw; max-height: 100dvh; margin: 0; padding: 0;
+  border: 0; background: transparent; display: none; align-items: center; justify-content: center;
+}
+dialog.lightbox[open] { display: flex; }
+dialog.lightbox::backdrop { background: rgb(0 0 0 / 0.9); }
+.lightbox__img { max-width: 100vw; max-height: 100dvh; width: auto; height: auto; object-fit: contain; cursor: zoom-out; }
+.lightbox__close {
+  position: fixed; top: max(0.75rem, env(safe-area-inset-top)); right: max(0.75rem, env(safe-area-inset-right));
+  width: 48px; height: 48px; border-radius: 50%; display: grid; place-items: center; cursor: pointer;
+  background: rgb(255 255 255 / 0.92); color: var(--green-dark); border: 0;
+}
+.lightbox__close:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
+
+/* Tall portrait photos keep their shape inside the tap-to-enlarge button:
+   the height cap applies and the width follows, centered. */
+.photo--portrait .photo-zoom { display: flex; justify-content: center; }
+.photo--portrait .photo-zoom img { width: auto; max-width: 100%; height: auto; }
+
+/* Photos that open large react on hover like the map: the photo grows
+   slightly inside its own frame; keyboard focus gets the green outline
+   (Charles, October 26). For visitors who ask for less motion it zooms
+   without the animation, like the map. */
+.photo-zoom picture { display: block; overflow: hidden; }
+.photo-zoom img { display: block; transition: transform 0.2s; }
+.photo-zoom:hover img { transform: scale(1.02); }
+.photo-zoom:focus-visible { outline: 3px solid var(--green); outline-offset: 3px; }
+@media (prefers-reduced-motion: reduce) { .photo-zoom img { transition: none; } }
+
+/* Phones: compact section links, so they take a few lines, not a screen.
+   Each link stays at least 36 px tall (above the 24 px minimum for tap
+   targets) with space between them. */
+@media (max-width: 39.99rem) {
+  .section-links { margin: 1.25rem 0 0.25rem; }
+  .section-links ul { gap: 0.375rem; }
+  .section-links a { min-height: 36px; padding: 0.3rem 0.7rem; font-size: 0.9375rem; border-width: 1.5px; }
+}
+
+/* Body text 19 px on wide screens, on every page (main content only;
+   header, times bar and footer keep their sizes). */
+@media (min-width: 68rem) { main { font-size: 1.1875rem; } }
+
+/* Folded verses sit in a soft light-green block with their reference
+   button, so each verse reads as one unit; the block grows when the verse
+   opens. Text on this green: 12:1 contrast. The button stays white. */
+.verse[data-fold] {
+  background: var(--wash); border-radius: 0.75rem;
+  padding: 1rem 1.25rem 1rem 1rem; margin: 1.25rem 0;
+}
+.verse[data-fold] blockquote::before { top: -0.3rem; }
+.verse[data-fold] .verse-toggle { background: var(--paper); border-color: #C5DCCF; }
+.verse[data-fold] .verse-toggle:hover, .verse[data-fold]:not(.is-folded) .verse-toggle { border-color: var(--green); }
+@media (min-width: 68rem) {
+  .page--verses .passage__verses .verse[data-fold] { margin: 1.25rem 0; padding: 1.25rem 1.75rem 1.25rem 1.25rem; }
+}
+
+/* Page heroes (Baptism, Tijuana, Ensenada): the page title and introduction
+   on the same translucent panel as the home page. */
+.hero__intro p { font-size: 1.125rem; line-height: 1.5; margin: 0 0 0.5rem; }
+.hero__intro > :last-child { margin-bottom: 0; }
+.hero--plain .hero__card h1 { font-size: clamp(1.875rem, 1rem + 2.4vw, 3rem); }
+@media (min-width: 60rem) {
+  .hero__intro p { font-size: 1.1875rem; }
+  /* Panel on the right side of the photo (Baptism: keeps the couple clear). */
+  .hero--right .hero__card { justify-self: end; width: min(28rem, 34%); margin: 2rem 3.5% 2.5rem 0; }
+  .hero--right .hero__card h1 { font-size: clamp(1.75rem, 0.8rem + 1.6vw, 2.5rem); }
+}
+
+/* Page heroes: a noticeably see-through panel, 60% white with a light blur,
+   so the photo shows through it (Charles, October 29). Worst case, a black
+   patch behind it, the title and text still measure about 5:1. The home
+   panel stays at 88% for its green WhatsApp link. */
+.hero--plain .hero__card {
+  background: rgb(255 255 255 / 0.6);
+  -webkit-backdrop-filter: blur(5px) saturate(1.1); backdrop-filter: blur(5px) saturate(1.1);
+}
+@media (min-width: 60rem) {
+  .hero--plain .hero__card { padding: 1.5rem 2.25rem 1.5rem; }
+  .hero--plain .hero__card h1 { margin-bottom: 0.25em; }
+}
+@media (prefers-reduced-transparency: reduce) {
+  .hero--plain .hero__card { background: var(--paper); }
+}
+
+/* Panel in the upper-left corner (Baptism test): wide and short, kept in
+   the sky above the couple's heads (which start 30% down the photo): title
+   on one line, introduction on two. */
+@media (min-width: 60rem) {
+  .hero--top-left .hero__card { align-self: start; justify-self: start; width: min(46rem, 74%); margin: 1rem 0 2rem 3%; padding: 1rem 1.25rem 1.125rem; }
+  .hero--top-left .hero__card h1 { font-size: clamp(1.75rem, 0.8rem + 1.2vw, 2.25rem); margin-bottom: 0.2em; }
+  .hero--top-left .hero__intro p { font-size: 1rem; line-height: 1.5; }
+}
+
+/* Phones and tablets: a smaller overlap for photos whose faces sit low
+   (Children: the panel starts 76% down the photo instead of 62%). */
+@media (max-width: 59.99rem) { .hero--overlap-small .hero__card { margin-top: -18vw; } }
+/* No overlap at all, for photos whose subject fills the lower part
+   (Need Prayer: the pastor's hand on the kneeling man's shoulder). */
+@media (max-width: 59.99rem) { .hero--overlap-none .hero__card { margin-top: 0; } }
+
+/* Panel on the left side of the photo (Need Prayer: over the pulpit, which
+   fills the left 43% of the photo; every face and the praying hands are to
+   its right). */
+@media (min-width: 60rem) {
+  .hero--left .hero__card { align-self: center; justify-self: start; width: min(30rem, 38%); margin: 1.5rem 0 1.5rem 2.5%; padding: 1.25rem 1.5rem 1.375rem; }
+  .hero--left .hero__card h1 { font-size: clamp(1.75rem, 0.8rem + 1.4vw, 2.5rem); }
+  .hero--left .hero__intro p { font-size: 1.0625rem; line-height: 1.5; }
+}
+
+/* Introduction paragraphs that follow the hero panel's button. */
+.page-intro-rest { padding-top: 2rem; }
+
+/* A section's photo beside its text and verses (Children test). */
+@media (min-width: 60rem) {
+  .section-split { display: grid; grid-template-columns: minmax(0, 1fr) 17rem; gap: 2.5rem; align-items: start; }
+  .section-split--left { grid-template-columns: 17rem minmax(0, 1fr); }
+  .section-split--left .section-split__media { order: -1; }
+  .section-split__media .photo-row { margin: 1.25rem 0 0; }
+  .section-split__media .photo--portrait img { max-height: none; width: 100%; }
+}
+
+/* A photo placed after a gallery's videos: one per row, centered. */
+.gallery-after { display: grid; justify-items: center; margin: 0 0 2rem; }
+.gallery-after .photo { margin: 0; width: min(100%, 30rem); max-width: none; }
+
+/* ---------- Street ministry page (October 25) ----------
+   A story told from top to bottom: each section's photo sits beside its
+   text and verses, alternating sides, with an offset mint frame; the
+   middle section ("so that everyone can hear") is a full-width band with a
+   pair of photos; the page ends on an invitation card. Phones: photos
+   follow their text, the pair stays side by side. */
+.page--street-ministry .verse {
+  background: var(--wash); border-radius: 0.75rem;
+  padding: 1.125rem 1.25rem 1rem 1rem; margin: 1.5rem 0;
+}
+.page--street-ministry .verse blockquote::before { top: -0.3rem; }
+.page--street-ministry .section-split__media .photo picture, .page--baptism .section-split__media .photo picture { box-shadow: 10px 10px 0 var(--mint); }
+.page--street-ministry .section-split--left .section-split__media .photo picture, .page--baptism .section-split--left .section-split__media .photo picture { box-shadow: -10px 10px 0 var(--mint); }
+.page--street-ministry .section { padding-bottom: 1rem; }
+@media (min-width: 60rem) {
+  .page--street-ministry .section-split, .page--baptism .section-split { grid-template-columns: minmax(0, 1fr) 24rem; gap: 3.25rem; align-items: center; }
+  .page--street-ministry .section-split--left, .page--baptism .section-split--left { grid-template-columns: 24rem minmax(0, 1fr); }
+  .page--street-ministry .section-split__media .photo picture, .page--baptism .section-split__media .photo picture { box-shadow: 16px 16px 0 var(--mint); }
+  .page--street-ministry .section-split--left .section-split__media .photo picture, .page--baptism .section-split--left .section-split__media .photo picture { box-shadow: -16px 16px 0 var(--mint); }
+  .page--street-ministry .section-split__media .photo-row, .page--baptism .section-split__media .photo-row { margin: 0 0 16px; }
+}
+/* The band. */
+.page--street-ministry .page-body > .section:nth-of-type(3) {
+  grid-column: full; background: var(--stone);
+  margin: 2.5rem 0 1.5rem; padding: 2.5rem max(var(--gutter), calc((100% - 60rem) / 2)) 2rem;
+}
+.page--street-ministry .page-body > .section:nth-of-type(3) .verse { background: var(--paper); }
+/* Its text, at the shorter reading width, centered above its photos. */
+@media (min-width: 68rem) {
+  .page--street-ministry .page-body > .section:nth-of-type(3) > :is(h2, p, .passage) { max-width: var(--prose); margin-left: auto; margin-right: auto; }
+}
+.page--street-ministry .page-body > .section:nth-of-type(3) .photo-row { max-width: 46rem; margin: 2rem auto 0.5rem; gap: 1rem; }
+.page--street-ministry .page-body > .section:nth-of-type(3) .photo-row .photo--portrait img { max-height: 34rem; }
+@media (max-width: 39.99rem) {
+  .page--street-ministry .photo-row--2 { grid-template-columns: 1fr 1fr; gap: 0.5rem; }
+}
+/* The invitation card. */
+.page--street-ministry .page-body > .section:last-of-type {
+  background: var(--mint); border-radius: 1rem; border-top: 5px solid var(--green);
+  margin: 2.5rem 0 1.5rem; padding: 1.75rem var(--gutter) 2rem;
+}
+@media (min-width: 48rem) { .page--street-ministry .page-body > .section:last-of-type { padding: 2.25rem 2.75rem 2.5rem; } }
+.page--street-ministry .page-body > .section:last-of-type .verse { background: var(--paper); }
+
+/* Street map on the church pages: a picture of the map that opens the
+   church's directions, like the button below it (Charles, October 26). */
+.map { margin: 1.5rem 0 0.75rem; max-width: 40rem; }
+.map__link { display: block; border-radius: 0.75rem; overflow: hidden; box-shadow: 0 0 0 1px rgb(0 0 0 / 0.12), var(--shadow); }
+/* The map shows at its true size, cropped around the pin to fit the box, so
+   the street names stay readable at any width (Charles, October 28). */
+.map__link img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; min-height: 13rem; object-fit: none; object-position: 50% 50%; transition: transform 0.2s; }
+.map__link:hover img { transform: scale(1.02); }
+.map__link:focus-visible { outline: 3px solid var(--green); outline-offset: 3px; }
+.map__credit { margin-top: 0.4rem; font-size: 0.8125rem; color: var(--slate); }
+@media (prefers-reduced-motion: reduce) { .map__link img { transition: none; } }
+
+/* Tijuana page, Children section: two wide photos stacked on the left, the
+   tall armor photo beside them on the right (Charles, October 26). */
+@media (min-width: 40rem) {
+  .page--tijuana .photo-row--3 { grid-template-columns: 1fr 1fr; }
+  .page--tijuana .photo-row--3 > :nth-child(2) { grid-column: 2; grid-row: 1 / span 2; }
+  .page--tijuana .photo-row--3 > :nth-child(3) { grid-column: 1; grid-row: 2; }
+}
+
+/* Contact cards on the church pages (Charles, October 26): an icon for
+   each way to reach the church instead of its name, with the number or
+   page name beside it. Brand colors for WhatsApp, Facebook and Instagram. */
+.contact-cards {
+  list-style: none; margin: 1.25rem 0 0.5rem; padding: 0;
+  display: grid; gap: 0.75rem; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+}
+.contact-card a {
+  display: flex; align-items: center; gap: 0.9rem; height: 100%; box-sizing: border-box;
+  padding: 0.85rem 1rem; border: 1px solid #DCE5E0; border-radius: 0.9rem; background: var(--paper);
+  color: var(--slate); text-decoration: none; box-shadow: 0 1px 2px rgb(0 0 0 / 0.04);
+  transition: border-color 0.15s, box-shadow 0.15s, transform 0.15s;
+}
+.contact-card a:hover { border-color: var(--green); box-shadow: var(--shadow); transform: translateY(-1px); }
+.contact-card a:focus-visible { outline: 3px solid var(--green); outline-offset: 2px; }
+.contact-card__icon {
+  flex: none; width: 2.75rem; height: 2.75rem; border-radius: 50%;
+  display: grid; place-items: center; color: #fff; background: var(--green);
+}
+.contact-card__icon .icon { width: 1.35rem; height: 1.35rem; }
+.contact-card--whatsapp .contact-card__icon { background: #25D366; }
+.contact-card--facebook .contact-card__icon { background: #1877F2; }
+.contact-card--instagram .contact-card__icon { background: radial-gradient(circle at 30% 107%, #FDF497 0%, #FDF497 5%, #FD5949 45%, #D6249F 60%, #285AEB 90%); }
+.contact-card__text { display: flex; flex-direction: column; min-width: 0; }
+.contact-card__main { font-weight: 700; font-size: 1.0625rem; color: var(--green-dark); overflow-wrap: anywhere; }
+.contact-card__sub { font-size: 0.875rem; color: var(--slate); }
+@media (prefers-reduced-motion: reduce) { .contact-card a { transition: none; } .contact-card a:hover { transform: none; } }
+
+/* Contact page: a church's address as a link to directions, with a pin
+   (Charles, October 26). */
+.place-address { display: flex; align-items: flex-start; gap: 0.5rem; }
+.place-address .icon { flex: none; margin-top: 0.25em; color: var(--green); }
+.page--contact .contact-cards { margin-top: 1rem; }
+
+/* Contact page, "The national church": the heading stays on the page; the
+   logo and text sit on a dark green card below it, as the logo is white
+   artwork (Charles, October 26). */
+.national-card {
+  background: var(--green-dark); color: #fff; border-radius: 1rem;
+  padding: 1.5rem var(--gutter) 1.25rem; margin: 1rem 0 1.5rem;
+}
+@media (min-width: 48rem) { .national-card { padding: 2rem 2.75rem 1.75rem; } }
+.national-card p { margin-bottom: 0; }
+.national-card a { color: #fff; }
+.national-card a:hover { color: var(--mint); }
+.national-card a:focus-visible { outline-color: #fff; }
+.national-logo { display: block; width: min(100% * var(--logo-w, 1), 26rem * var(--logo-w, 1)); margin: 0 0 1.25rem; }
+.national-logo img { display: block; width: 100%; height: auto; }
+/* IPUL USA (Charles, October 31): the same card on the blue of its own
+   logo (#003160, from ipul.us). Its logos (ULPC in English, IPUL in
+   Spanish) are narrower than IPUL México's; --logo-w (set in the page)
+   sizes each to the same height, so the two cards match. */
+.national-card--usa { background: #003160; }
+.national-card + .national-card { margin-top: 1rem; }
+
+/* Baptism page: two photos stacked in the column beside the verses, with
+   room for each photo's mint frame. */
+.page--baptism .section-split__media .photo-row--2 { gap: 1.5rem; }
+@media (min-width: 40rem) {
+  .page--baptism .section-split__media .photo-row--2 { grid-template-columns: 1fr; gap: 1.75rem; }
+}
+
+/* Baptism page: a narrower photo column (the photos beside the verses are
+   cropped to 4:3), so the verses get more room (Charles, October 26). */
+@media (min-width: 60rem) {
+  .page--baptism .section-split { grid-template-columns: minmax(0, 1fr) 19rem; }
+  .page--baptism .section-split--left { grid-template-columns: 19rem minmax(0, 1fr); }
+}
+
+/* Baptism page: photos and a video in columns of one height (lib/pages.js,
+   mosaic). The column widths come from the pictures' shapes, so the crop to
+   fill each box is small. On phones, one picture after another. */
+.mosaic { display: grid; gap: 0.75rem; margin: 2rem 0 0.5rem; }
+.mosaic__stack { display: grid; gap: 0.75rem; }
+/* Rows of one mosaic sit as close as the pictures within a row. */
+.mosaic:has(+ .mosaic) { margin-bottom: 0; }
+.mosaic + .mosaic { margin-top: 0.75rem; }
+.mosaic .photo, .mosaic .video { margin: 0; max-width: none; }
+.mosaic .photo img { width: 100%; height: auto; }
+.mosaic .video { position: relative; justify-self: center; width: min(100%, 15rem); }
+.mosaic .video--landscape { width: 100%; }
+@media (min-width: 40rem) {
+  .mosaic { grid-template-columns: var(--mosaic-cols); grid-template-rows: minmax(0, 1fr); aspect-ratio: var(--mosaic-ratio); min-height: 0; }
+  .mosaic__stack { display: flex; flex-direction: column; min-height: 0; }
+  .mosaic__cell { flex: var(--cell-h) 1 0; min-height: 0; }
+  .mosaic .video { width: 100%; }
+  .mosaic .photo, .mosaic picture, .mosaic .photo-zoom, .mosaic .video { display: block; height: 100%; }
+  .mosaic .photo img, .mosaic .video video { width: 100%; height: 100%; object-fit: cover; }
+}
+/* Children page, phones: the mosaic's tall photos and videos two side by
+   side, like the page's other pairs. */
+@media (max-width: 39.99rem) {
+  .page--children .mosaic { grid-template-columns: 1fr 1fr; gap: 0.5rem; }
+  .page--children .mosaic .video { width: 100%; }
+}
+
+/* Children page, Jesus welcomed the children: the armor of God video beside the text,
+   larger, in an offset mint frame like the Baptism page photos, so visitors
+   find it (Charles, October 28). */
+.page--children .section:not(.section--sub) .section-split__media .video video { box-shadow: 10px 10px 0 var(--mint); }
+.page--children .section:not(.section--sub) .section-split__media .photo-row { margin-bottom: 10px; }
+.page--children .section:not(.section--sub) .section-split__media .photo-row > .video--portrait { width: 100%; max-width: none; }
+@media (min-width: 60rem) {
+  /* Teaching at home: its wide photo gets a wider column, centered on the text. */
+  .page--children .section--sub .section-split--right { grid-template-columns: minmax(0, 1fr) 22rem; gap: 2.5rem; align-items: center; }
+  /* The text starts level with the top of the video (Charles, October 28). */
+  .page--children .section:not(.section--sub) .section-split { grid-template-columns: minmax(0, 1fr) 20rem; gap: 3rem; align-items: start; }
+  .page--children .section:not(.section--sub) .section-split__media .video video { box-shadow: 16px 16px 0 var(--mint); }
+  .page--children .section:not(.section--sub) .section-split__media .photo-row { margin: 0.4rem 0 16px; }
+}
+
+/* Video descriptions are not shown (Baptism and Children, Charles, October 26;
+   every page since October 29); screen readers still read them (the video
+   points to its description). */
+.video figcaption {
+  position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap;
+}
+
+/* I'm New: a church's photo in the pair with the other church's card,
+   cropped to the card's 3:2 shape and labelled with the church name
+   (Charles, October 26). */
+.pair .photo { margin: 0; }
+.photo--place, .photo--tagged { position: relative; }
+.photo--place picture, .photo--place .photo-zoom { display: block; height: 100%; }
+.photo--place img { height: 100%; aspect-ratio: 3 / 2; object-fit: cover; object-position: 75% 50%; }
+.place-tag {
+  position: absolute; left: 0.5rem; bottom: 0.5rem; max-width: calc(100% - 1rem);
+  padding: 0.2rem 0.55rem;
+  background: rgba(255, 255, 255, 0.92); color: var(--green-dark);
+  font: 800 clamp(0.8125rem, 0.65rem + 0.7vw, 1.125rem)/1.2 var(--serif); pointer-events: none;
+}
+
+/* About, "Together": six camp photos, two across on phones, three across
+   and wider than the text on wider screens, each cropped to 4:3 so the
+   rows line up (Charles, October 29). */
+.page--about .photo-row--6 { grid-template-columns: 1fr 1fr; gap: 0.5rem; }
+.page--about .photo-row--6 .photo { max-width: none; }
+.page--about .photo-row--6 img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+@media (min-width: 40rem) { .page--about .photo-row--6 { grid-template-columns: repeat(3, 1fr); gap: 0.75rem; } }
+@media (min-width: 40rem) {
+  .page--about .section > .photo-row--6 { width: min(60rem, 100vw - 2 * var(--gutter)); margin-left: 50%; translate: -50% 0; }
+}
+
+/* ---------- Questions and answers ---------- */
+/* I'm New, "Questions people ask" (Charles, October 30): each question is a
+   card that opens to show its answer. The answer slides open and fades in
+   while the round icon turns, its plus becoming a minus. Without
+   JavaScript the questions still open (the browser's own details). */
+.faq { display: grid; gap: 0.75rem; margin: 1.5rem 0; }
+.faq__item {
+  border: 1px solid rgb(9 62 33 / 0.14); border-radius: 0.75rem; background: var(--paper);
+  transition: border-color 0.35s, box-shadow 0.35s;
+}
+.faq__item:hover { border-color: rgb(7 106 73 / 0.4); }
+.faq__item.is-open, html:not(.js) .faq__item[open] { border-color: rgb(7 106 73 / 0.45); box-shadow: 0 0.5rem 1.5rem rgb(9 62 33 / 0.08); }
+.faq__q {
+  display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+  min-height: 3.5rem; padding: 0.875rem 1rem 0.875rem 1.25rem; border-radius: 0.75rem;
+  font: 700 1.1875rem/1.3 var(--sans); color: var(--green-dark); cursor: pointer; list-style: none;
+}
+.faq__q::-webkit-details-marker { display: none; }
+.faq__q::marker { content: ""; }
+.faq__icon {
+  position: relative; flex: none; width: 2rem; height: 2rem; border-radius: 50%;
+  border: 2px solid var(--green); color: var(--green);
+  transition: background-color 0.35s, color 0.35s, transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.faq__q:hover .faq__icon { background: var(--wash); }
+.faq__icon::before, .faq__icon::after {
+  content: ""; position: absolute; top: 50%; left: 50%; width: 0.75rem; height: 2px; margin: -1px 0 0 -0.375rem;
+  border-radius: 1px; background: currentColor; transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.faq__icon::after { transform: rotate(90deg); }
+.faq__item.is-open .faq__icon, html:not(.js) .faq__item[open] .faq__icon { background: var(--green); color: #fff; transform: rotate(180deg); }
+.faq__item.is-open .faq__icon::after, html:not(.js) .faq__item[open] .faq__icon::after { transform: rotate(0deg); }
+.faq__a-inner > p { margin: 0; padding: 0 1.25rem 1.25rem; }
+.js .faq__a { display: grid; grid-template-rows: 0fr; transition: grid-template-rows 0.35s cubic-bezier(0.4, 0, 0.2, 1); }
+.js .faq__item.is-open .faq__a { grid-template-rows: 1fr; cursor: pointer; }
+.js .faq__a-inner { min-height: 0; overflow: hidden; }
+.js .faq__a-inner > p { opacity: 0; transform: translateY(-0.375rem); transition: opacity 0.35s, transform 0.35s cubic-bezier(0.4, 0, 0.2, 1); }
+.js .faq__item.is-open .faq__a-inner > p { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  .faq__item, .faq__icon, .faq__icon::before, .faq__icon::after, .js .faq__a, .js .faq__a-inner > p { transition: none; }
+}
+@media (forced-colors: active) {
+  .faq__item.is-open .faq__icon { background: CanvasText; color: Canvas; }
+}

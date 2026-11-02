@@ -1,0 +1,1317 @@
+{
+  "photos": {
+    "ensenada-group": {
+      "stamp": "313863-1792616667295",
+      "width": 1600,
+      "height": 1200,
+      "webp": {
+        "400": "ensenada-group-400.webp",
+        "800": "ensenada-group-800.webp",
+        "1200": "ensenada-group-1200.webp",
+        "1600": "ensenada-group-1600.webp"
+      },
+      "jpg": "ensenada-group-800.jpg",
+      "share": "ensenada-group-share.jpg",
+      "files": [
+        "ensenada-group-400.webp",
+        "ensenada-group-800.webp",
+        "ensenada-group-1200.webp",
+        "ensenada-group-1600.webp",
+        "ensenada-group-800.jpg",
+        "ensenada-group-share.jpg"
+      ]
+    },
+    "tijuana-worship-standing": {
+      "stamp": "338642-1792867467731",
+      "width": 2048,
+      "height": 1536,
+      "webp": {
+        "400": "tijuana-worship-standing-400.webp",
+        "800": "tijuana-worship-standing-800.webp",
+        "1200": "tijuana-worship-standing-1200.webp",
+        "1600": "tijuana-worship-standing-1600.webp"
+      },
+      "jpg": "tijuana-worship-standing-800.jpg",
+      "share": null,
+      "files": [
+        "tijuana-worship-standing-400.webp",
+        "tijuana-worship-standing-800.webp",
+        "tijuana-worship-standing-1200.webp",
+        "tijuana-worship-standing-1600.webp",
+        "tijuana-worship-standing-800.jpg"
+      ]
+    },
+    "ensenada-entrance-welcome": {
+      "stamp": "321410-1792613090549",
+      "width": 2048,
+      "height": 1537,
+      "webp": {
+        "400": "ensenada-entrance-welcome-400.webp",
+        "800": "ensenada-entrance-welcome-800.webp",
+        "1200": "ensenada-entrance-welcome-1200.webp",
+        "1600": "ensenada-entrance-welcome-1600.webp"
+      },
+      "jpg": "ensenada-entrance-welcome-800.jpg",
+      "share": "ensenada-entrance-welcome-share.jpg",
+      "files": [
+        "ensenada-entrance-welcome-400.webp",
+        "ensenada-entrance-welcome-800.webp",
+        "ensenada-entrance-welcome-1200.webp",
+        "ensenada-entrance-welcome-1600.webp",
+        "ensenada-entrance-welcome-800.jpg",
+        "ensenada-entrance-welcome-share.jpg"
+      ]
+    },
+    "tijuana-sunday-service": {
+      "stamp": "209933-1792614582152",
+      "width": 1600,
+      "height": 1200,
+      "webp": {
+        "400": "tijuana-sunday-service-400.webp",
+        "800": "tijuana-sunday-service-800.webp",
+        "1200": "tijuana-sunday-service-1200.webp",
+        "1600": "tijuana-sunday-service-1600.webp"
+      },
+      "jpg": "tijuana-sunday-service-800.jpg",
+      "share": "tijuana-sunday-service-share.jpg",
+      "files": [
+        "tijuana-sunday-service-400.webp",
+        "tijuana-sunday-service-800.webp",
+        "tijuana-sunday-service-1200.webp",
+        "tijuana-sunday-service-1600.webp",
+        "tijuana-sunday-service-800.jpg",
+        "tijuana-sunday-service-share.jpg"
+      ]
+    },
+    "tijuana-service-wide": {
+      "stamp": "1861302-1793305456539",
+      "width": 1600,
+      "height": 1200,
+      "webp": {
+        "400": "tijuana-service-wide-400.webp",
+        "800": "tijuana-service-wide-800.webp",
+        "1200": "tijuana-service-wide-1200.webp",
+        "1600": "tijuana-service-wide-1600.webp"
+      },
+      "jpg": "tijuana-service-wide-800.jpg",
+      "share": "tijuana-service-wide-share.jpg",
+      "files": [
+        "tijuana-service-wide-400.webp",
+        "tijuana-service-wide-800.webp",
+        "tijuana-service-wide-1200.webp",
+        "tijuana-service-wide-1600.webp",
+        "tijuana-service-wide-800.jpg",
+        "tijuana-service-wide-share.jpg"
+      ]
+    },
+    "ensenada-hall-pulpit": {
+      "stamp": "503815-1792715871035",
+      "width": 2000,
+      "height": 1500,
+      "webp": {
+        "400": "ensenada-hall-pulpit-400.webp",
+        "800": "ensenada-hall-pulpit-800.webp",
+        "1200": "ensenada-hall-pulpit-1200.webp",
+        "1600": "ensenada-hall-pulpit-1600.webp"
+      },
+      "jpg": "ensenada-hall-pulpit-800.jpg",
+      "share": "ensenada-hall-pulpit-share.jpg",
+      "files": [
+        "ensenada-hall-pulpit-400.webp",
+        "ensenada-hall-pulpit-800.webp",
+        "ensenada-hall-pulpit-1200.webp",
+        "ensenada-hall-pulpit-1600.webp",
+        "ensenada-hall-pulpit-800.jpg",
+        "ensenada-hall-pulpit-share.jpg"
+      ]
+    },
+    "tijuana-children-message": {
+      "stamp": "247451-1792566273003",
+      "width": 1600,
+      "height": 1200,
+      "webp": {
+        "400": "tijuana-children-message-400.webp",
+        "800": "tijuana-children-message-800.webp",
+        "1200": "tijuana-children-message-1200.webp",
+        "1600": "tijuana-children-message-1600.webp"
+      },
+      "jpg": "tijuana-children-message-800.jpg",
+      "share": null,
+      "files": [
+        "tijuana-children-message-400.webp",
+        "tijuana-children-message-800.webp",
+        "tijuana-children-message-1200.webp",
+        "tijuana-children-message-1600.webp",
+        "tijuana-children-message-800.jpg"
+      ]
+    },
+    "tijuana-guitar-worship": {
+      "stamp": "219146-1792614542995",
+      "width": 2048,
+      "height": 1536,
+      "webp": {
+        "400": "tijuana-guitar-worship-400.webp",
+        "800": "tijuana-guitar-worship-800.webp",
+        "1200": "tijuana-guitar-worship-1200.webp",
+        "1600": "tijuana-guitar-worship-1600.webp"
+      },
+      "jpg": "tijuana-guitar-worship-800.jpg",
+      "share": null,
+      "files": [
+        "tijuana-guitar-worship-400.webp",
+        "tijuana-guitar-worship-800.webp",
+        "tijuana-guitar-worship-1200.webp",
+        "tijuana-guitar-worship-1600.webp",
+        "tijuana-guitar-worship-800.jpg"
+      ]
+    },
+    "tijuana-sermon-seated": {
+      "stamp": "2255380-1793297633713",
+      "width": 1448,
+      "height": 1086,
+      "webp": {
+        "400": "tijuana-sermon-seated-400.webp",
+        "800": "tijuana-sermon-seated-800.webp",
+        "1200": "tijuana-sermon-seated-1200.webp",
+        "1448": "tijuana-sermon-seated-1448.webp"
+      },
+      "jpg": "tijuana-sermon-seated-800.jpg",
+      "share": null,
+      "files": [
+        "tijuana-sermon-seated-400.webp",
+        "tijuana-sermon-seated-800.webp",
+        "tijuana-sermon-seated-1200.webp",
+        "tijuana-sermon-seated-1448.webp",
+        "tijuana-sermon-seated-800.jpg"
+      ]
+    },
+    "tijuana-room-wide": {
+      "stamp": "226549-1792614572944",
+      "width": 1600,
+      "height": 1200,
+      "webp": {
+        "400": "tijuana-room-wide-400.webp",
+        "800": "tijuana-room-wide-800.webp",
+        "1200": "tijuana-room-wide-1200.webp",
+        "1600": "tijuana-room-wide-1600.webp"
+      },
+      "jpg": "tijuana-room-wide-800.jpg",
+      "share": null,
+      "files": [
+        "tijuana-room-wide-400.webp",
+        "tijuana-room-wide-800.webp",
+        "tijuana-room-wide-1200.webp",
+        "tijuana-room-wide-1600.webp",
+        "tijuana-room-wide-800.jpg"
+      ]
+    },
+    "tijuana-room-from-front": {
+      "stamp": "185391-1792565697565",
+      "width": 1600,
+      "height": 1200,
+      "webp": {
+        "400": "tijuana-room-from-front-400.webp",
+        "800": "tijuana-room-from-front-800.webp",
+        "1200": "tijuana-room-from-front-1200.webp",
+        "1600": "tijuana-room-from-front-1600.webp"
+      },
+      "jpg": "tijuana-room-from-front-800.jpg",
+      "share": null,
+      "files": [
+        "tijuana-room-from-front-400.webp",
+        "tijuana-room-from-front-800.webp",
+        "tijuana-room-from-front-1200.webp",
+        "tijuana-room-from-front-1600.webp",
+        "tijuana-room-from-front-800.jpg"
+      ]
+    },
+    "ensenada-worship-standing": {
+      "stamp": "171215-1792613037547",
+      "width": 1600,
+      "height": 1200,
+      "webp": {
+        "400": "ensenada-worship-standing-400.webp",
+        "800": "ensenada-worship-standing-800.webp",
+        "1200": "ensenada-worship-standing-1200.webp",
+        "1600": "ensenada-worship-standing-1600.webp"
+      },
+      "jpg": "ensenada-worship-standing-800.jpg",
+      "share": null,
+      "files": [
+        "ensenada-worship-standing-400.webp",
+        "ensenada-worship-standing-800.webp",
+        "ensenada-worship-standing-1200.webp",
+        "ensenada-worship-standing-1600.webp",
+        "ensenada-worship-standing-800.jpg"
+      ]
+    },
+    "ensenada-worship-service": {
+      "stamp": "275822-1792566419647",
+      "width": 1600,
+      "height": 1200,
+      "webp": {
+        "400": "ensenada-worship-service-400.webp",
+        "800": "ensenada-worship-service-800.webp",
+        "1200": "ensenada-worship-service-1200.webp",
+        "1600": "ensenada-worship-service-1600.webp"
+      },
+      "jpg": "ensenada-worship-service-800.jpg",
+      "share": null,
+      "files": [
+        "ensenada-worship-service-400.webp",
+        "ensenada-worship-service-800.webp",
+        "ensenada-worship-service-1200.webp",
+        "ensenada-worship-service-1600.webp",
+        "ensenada-worship-service-800.jpg"
+      ]
+    },
+    "ensenada-childrens-day": {
+      "stamp": "441742-1792612701119",
+      "width": 2048,
+      "height": 1537,
+      "webp": {
+        "400": "ensenada-childrens-day-400.webp",
+        "800": "ensenada-childrens-day-800.webp",
+        "1200": "ensenada-childrens-day-1200.webp",
+        "1600": "ensenada-childrens-day-1600.webp"
+      },
+      "jpg": "ensenada-childrens-day-800.jpg",
+      "share": null,
+      "files": [
+        "ensenada-childrens-day-400.webp",
+        "ensenada-childrens-day-800.webp",
+        "ensenada-childrens-day-1200.webp",
+        "ensenada-childrens-day-1600.webp",
+        "ensenada-childrens-day-800.jpg"
+      ]
+    },
+    "camp-family-banner": {
+      "stamp": "88999-1792610534900",
+      "width": 960,
+      "height": 694,
+      "webp": {
+        "400": "camp-family-banner-400.webp",
+        "800": "camp-family-banner-800.webp",
+        "960": "camp-family-banner-960.webp"
+      },
+      "jpg": "camp-family-banner-800.jpg",
+      "share": null,
+      "files": [
+        "camp-family-banner-400.webp",
+        "camp-family-banner-800.webp",
+        "camp-family-banner-960.webp",
+        "camp-family-banner-800.jpg"
+      ]
+    },
+    "camp-soccer": {
+      "stamp": "1110371-1793306975647",
+      "width": 960,
+      "height": 720,
+      "webp": {
+        "400": "camp-soccer-400.webp",
+        "800": "camp-soccer-800.webp",
+        "960": "camp-soccer-960.webp"
+      },
+      "jpg": "camp-soccer-800.jpg",
+      "share": null,
+      "files": [
+        "camp-soccer-400.webp",
+        "camp-soccer-800.webp",
+        "camp-soccer-960.webp",
+        "camp-soccer-800.jpg"
+      ]
+    },
+    "camp-campfire": {
+      "stamp": "680176-1793308093282",
+      "width": 960,
+      "height": 720,
+      "webp": {
+        "400": "camp-campfire-400.webp",
+        "800": "camp-campfire-800.webp",
+        "960": "camp-campfire-960.webp"
+      },
+      "jpg": "camp-campfire-800.jpg",
+      "share": null,
+      "files": [
+        "camp-campfire-400.webp",
+        "camp-campfire-800.webp",
+        "camp-campfire-960.webp",
+        "camp-campfire-800.jpg"
+      ]
+    },
+    "camp-youth-banner": {
+      "stamp": "74662-1792610597463",
+      "width": 960,
+      "height": 720,
+      "webp": {
+        "400": "camp-youth-banner-400.webp",
+        "800": "camp-youth-banner-800.webp",
+        "960": "camp-youth-banner-960.webp"
+      },
+      "jpg": "camp-youth-banner-800.jpg",
+      "share": null,
+      "files": [
+        "camp-youth-banner-400.webp",
+        "camp-youth-banner-800.webp",
+        "camp-youth-banner-960.webp",
+        "camp-youth-banner-800.jpg"
+      ]
+    },
+    "camp-worship-band": {
+      "stamp": "99537-1792610512324",
+      "width": 960,
+      "height": 720,
+      "webp": {
+        "400": "camp-worship-band-400.webp",
+        "800": "camp-worship-band-800.webp",
+        "960": "camp-worship-band-960.webp"
+      },
+      "jpg": "camp-worship-band-800.jpg",
+      "share": null,
+      "files": [
+        "camp-worship-band-400.webp",
+        "camp-worship-band-800.webp",
+        "camp-worship-band-960.webp",
+        "camp-worship-band-800.jpg"
+      ]
+    },
+    "camp-worship-hall": {
+      "stamp": "83305-1792610659419",
+      "width": 960,
+      "height": 720,
+      "webp": {
+        "400": "camp-worship-hall-400.webp",
+        "800": "camp-worship-hall-800.webp",
+        "960": "camp-worship-hall-960.webp"
+      },
+      "jpg": "camp-worship-hall-800.jpg",
+      "share": null,
+      "files": [
+        "camp-worship-hall-400.webp",
+        "camp-worship-hall-800.webp",
+        "camp-worship-hall-960.webp",
+        "camp-worship-hall-800.jpg"
+      ]
+    },
+    "ensenada-open-bible": {
+      "stamp": "91933-1792609756953",
+      "width": 960,
+      "height": 1280,
+      "webp": {
+        "400": "ensenada-open-bible-400.webp",
+        "800": "ensenada-open-bible-800.webp",
+        "960": "ensenada-open-bible-960.webp"
+      },
+      "jpg": "ensenada-open-bible-800.jpg",
+      "share": null,
+      "files": [
+        "ensenada-open-bible-400.webp",
+        "ensenada-open-bible-800.webp",
+        "ensenada-open-bible-960.webp",
+        "ensenada-open-bible-800.jpg"
+      ]
+    },
+    "tijuana-armor-of-god-child": {
+      "stamp": "1543162-1791750417000",
+      "width": 2160,
+      "height": 3840,
+      "webp": {
+        "400": "tijuana-armor-of-god-child-400.webp",
+        "800": "tijuana-armor-of-god-child-800.webp",
+        "1200": "tijuana-armor-of-god-child-1200.webp",
+        "1600": "tijuana-armor-of-god-child-1600.webp"
+      },
+      "jpg": "tijuana-armor-of-god-child-800.jpg",
+      "share": null,
+      "files": [
+        "tijuana-armor-of-god-child-400.webp",
+        "tijuana-armor-of-god-child-800.webp",
+        "tijuana-armor-of-god-child-1200.webp",
+        "tijuana-armor-of-god-child-1600.webp",
+        "tijuana-armor-of-god-child-800.jpg"
+      ]
+    },
+    "pastor-headshot": {
+      "stamp": "86574-1792780102880",
+      "width": 456,
+      "height": 570,
+      "webp": {
+        "400": "pastor-headshot-400.webp",
+        "456": "pastor-headshot-456.webp"
+      },
+      "jpg": "pastor-headshot-456.jpg",
+      "share": null,
+      "files": [
+        "pastor-headshot-400.webp",
+        "pastor-headshot-456.webp",
+        "pastor-headshot-456.jpg"
+      ]
+    },
+    "outreach-street": {
+      "stamp": "385199-1792613012349",
+      "width": 2048,
+      "height": 1537,
+      "webp": {
+        "400": "outreach-street-400.webp",
+        "800": "outreach-street-800.webp",
+        "1200": "outreach-street-1200.webp",
+        "1600": "outreach-street-1600.webp"
+      },
+      "jpg": "outreach-street-800.jpg",
+      "share": "outreach-street-share.jpg",
+      "files": [
+        "outreach-street-400.webp",
+        "outreach-street-800.webp",
+        "outreach-street-1200.webp",
+        "outreach-street-1600.webp",
+        "outreach-street-800.jpg",
+        "outreach-street-share.jpg"
+      ]
+    },
+    "outreach-leaflet": {
+      "stamp": "93125-1792613004365",
+      "width": 614,
+      "height": 960,
+      "webp": {
+        "400": "outreach-leaflet-400.webp",
+        "614": "outreach-leaflet-614.webp"
+      },
+      "jpg": "outreach-leaflet-614.jpg",
+      "share": null,
+      "files": [
+        "outreach-leaflet-400.webp",
+        "outreach-leaflet-614.webp",
+        "outreach-leaflet-614.jpg"
+      ]
+    },
+    "street-preaching": {
+      "stamp": "449727-1792613124735|crop:0,0,1536,1880",
+      "width": 1536,
+      "height": 1880,
+      "webp": {
+        "400": "street-preaching-400.webp",
+        "800": "street-preaching-800.webp",
+        "1200": "street-preaching-1200.webp",
+        "1536": "street-preaching-1536.webp"
+      },
+      "jpg": "street-preaching-800.jpg",
+      "share": null,
+      "files": [
+        "street-preaching-400.webp",
+        "street-preaching-800.webp",
+        "street-preaching-1200.webp",
+        "street-preaching-1536.webp",
+        "street-preaching-800.jpg"
+      ]
+    },
+    "street-guitar": {
+      "stamp": "94888-1792612934522|crop:0,60,720,700",
+      "width": 720,
+      "height": 700,
+      "webp": {
+        "400": "street-guitar-400.webp",
+        "720": "street-guitar-720.webp"
+      },
+      "jpg": "street-guitar-720.jpg",
+      "share": null,
+      "files": [
+        "street-guitar-400.webp",
+        "street-guitar-720.webp",
+        "street-guitar-720.jpg"
+      ]
+    },
+    "street-conversation": {
+      "stamp": "314986-1792613029162|crop:0,400,1536,1152",
+      "width": 1536,
+      "height": 1152,
+      "webp": {
+        "400": "street-conversation-400.webp",
+        "800": "street-conversation-800.webp",
+        "1200": "street-conversation-1200.webp",
+        "1536": "street-conversation-1536.webp"
+      },
+      "jpg": "street-conversation-800.jpg",
+      "share": null,
+      "files": [
+        "street-conversation-400.webp",
+        "street-conversation-800.webp",
+        "street-conversation-1200.webp",
+        "street-conversation-1536.webp",
+        "street-conversation-800.jpg"
+      ]
+    },
+    "street-neighborhood": {
+      "stamp": "125732-1792612956408|crop:0,200,723,560",
+      "width": 723,
+      "height": 560,
+      "webp": {
+        "400": "street-neighborhood-400.webp",
+        "723": "street-neighborhood-723.webp"
+      },
+      "jpg": "street-neighborhood-723.jpg",
+      "share": null,
+      "files": [
+        "street-neighborhood-400.webp",
+        "street-neighborhood-723.webp",
+        "street-neighborhood-723.jpg"
+      ]
+    },
+    "street-prayer": {
+      "stamp": "95320-1792612921818|crop:90,250,400,580",
+      "width": 400,
+      "height": 580,
+      "webp": {
+        "400": "street-prayer-400.webp"
+      },
+      "jpg": "street-prayer-400.jpg",
+      "share": null,
+      "files": [
+        "street-prayer-400.webp",
+        "street-prayer-400.jpg"
+      ]
+    },
+    "tijuana-children-presenting": {
+      "stamp": "1841596-1792606720811|crop:480,0,2880,2160",
+      "width": 2880,
+      "height": 2160,
+      "webp": {
+        "400": "tijuana-children-presenting-400.webp",
+        "800": "tijuana-children-presenting-800.webp",
+        "1200": "tijuana-children-presenting-1200.webp",
+        "1600": "tijuana-children-presenting-1600.webp"
+      },
+      "jpg": "tijuana-children-presenting-800.jpg",
+      "share": null,
+      "files": [
+        "tijuana-children-presenting-400.webp",
+        "tijuana-children-presenting-800.webp",
+        "tijuana-children-presenting-1200.webp",
+        "tijuana-children-presenting-1600.webp",
+        "tijuana-children-presenting-800.jpg"
+      ]
+    },
+    "retreat-night-worship": {
+      "stamp": "316347-1792616960516",
+      "width": 2048,
+      "height": 1536,
+      "webp": {
+        "400": "retreat-night-worship-400.webp",
+        "800": "retreat-night-worship-800.webp",
+        "1200": "retreat-night-worship-1200.webp",
+        "1600": "retreat-night-worship-1600.webp"
+      },
+      "jpg": "retreat-night-worship-800.jpg",
+      "share": null,
+      "files": [
+        "retreat-night-worship-400.webp",
+        "retreat-night-worship-800.webp",
+        "retreat-night-worship-1200.webp",
+        "retreat-night-worship-1600.webp",
+        "retreat-night-worship-800.jpg"
+      ]
+    },
+    "worship-shelter": {
+      "stamp": "638698-1792863804723",
+      "width": 2048,
+      "height": 1536,
+      "webp": {
+        "400": "worship-shelter-400.webp",
+        "800": "worship-shelter-800.webp",
+        "1200": "worship-shelter-1200.webp",
+        "1600": "worship-shelter-1600.webp"
+      },
+      "jpg": "worship-shelter-800.jpg",
+      "share": null,
+      "files": [
+        "worship-shelter-400.webp",
+        "worship-shelter-800.webp",
+        "worship-shelter-1200.webp",
+        "worship-shelter-1600.webp",
+        "worship-shelter-800.jpg"
+      ]
+    },
+    "ensenada-members-wall": {
+      "stamp": "406008-1792612594723",
+      "width": 2048,
+      "height": 1537,
+      "webp": {
+        "400": "ensenada-members-wall-400.webp",
+        "800": "ensenada-members-wall-800.webp",
+        "1200": "ensenada-members-wall-1200.webp",
+        "1600": "ensenada-members-wall-1600.webp"
+      },
+      "jpg": "ensenada-members-wall-800.jpg",
+      "share": null,
+      "files": [
+        "ensenada-members-wall-400.webp",
+        "ensenada-members-wall-800.webp",
+        "ensenada-members-wall-1200.webp",
+        "ensenada-members-wall-1600.webp",
+        "ensenada-members-wall-800.jpg"
+      ]
+    },
+    "ensenada-praying-over": {
+      "stamp": "173400-1792610335939",
+      "width": 1600,
+      "height": 1200,
+      "webp": {
+        "400": "ensenada-praying-over-400.webp",
+        "800": "ensenada-praying-over-800.webp",
+        "1200": "ensenada-praying-over-1200.webp",
+        "1600": "ensenada-praying-over-1600.webp"
+      },
+      "jpg": "ensenada-praying-over-800.jpg",
+      "share": null,
+      "files": [
+        "ensenada-praying-over-400.webp",
+        "ensenada-praying-over-800.webp",
+        "ensenada-praying-over-1200.webp",
+        "ensenada-praying-over-1600.webp",
+        "ensenada-praying-over-800.jpg"
+      ]
+    },
+    "ensenada-church-front": {
+      "stamp": "2013792-1793121128872|crop:0,10,2390,1593",
+      "width": 2390,
+      "height": 1593,
+      "webp": {
+        "400": "ensenada-church-front-400.webp",
+        "800": "ensenada-church-front-800.webp",
+        "1200": "ensenada-church-front-1200.webp",
+        "1600": "ensenada-church-front-1600.webp"
+      },
+      "jpg": "ensenada-church-front-800.jpg",
+      "share": null,
+      "files": [
+        "ensenada-church-front-400.webp",
+        "ensenada-church-front-800.webp",
+        "ensenada-church-front-1200.webp",
+        "ensenada-church-front-1600.webp",
+        "ensenada-church-front-800.jpg"
+      ]
+    },
+    "tijuana-house-front": {
+      "stamp": "2418704-1793133953759|crop:0,367,2176,1450",
+      "width": 2176,
+      "height": 1450,
+      "webp": {
+        "400": "tijuana-house-front-400.webp",
+        "800": "tijuana-house-front-800.webp",
+        "1200": "tijuana-house-front-1200.webp",
+        "1600": "tijuana-house-front-1600.webp"
+      },
+      "jpg": "tijuana-house-front-800.jpg",
+      "share": null,
+      "files": [
+        "tijuana-house-front-400.webp",
+        "tijuana-house-front-800.webp",
+        "tijuana-house-front-1200.webp",
+        "tijuana-house-front-1600.webp",
+        "tijuana-house-front-800.jpg"
+      ]
+    },
+    "retreat-kneeling-prayer": {
+      "stamp": "127612-1792613475091",
+      "width": 960,
+      "height": 720,
+      "webp": {
+        "400": "retreat-kneeling-prayer-400.webp",
+        "800": "retreat-kneeling-prayer-800.webp",
+        "960": "retreat-kneeling-prayer-960.webp"
+      },
+      "jpg": "retreat-kneeling-prayer-800.jpg",
+      "share": null,
+      "files": [
+        "retreat-kneeling-prayer-400.webp",
+        "retreat-kneeling-prayer-800.webp",
+        "retreat-kneeling-prayer-960.webp",
+        "retreat-kneeling-prayer-800.jpg"
+      ]
+    },
+    "prayer-altar-family": {
+      "stamp": "192688-1792565892248",
+      "width": 1600,
+      "height": 1200,
+      "webp": {
+        "400": "prayer-altar-family-400.webp",
+        "800": "prayer-altar-family-800.webp",
+        "1200": "prayer-altar-family-1200.webp",
+        "1600": "prayer-altar-family-1600.webp"
+      },
+      "jpg": "prayer-altar-family-800.jpg",
+      "share": "prayer-altar-family-share.jpg",
+      "files": [
+        "prayer-altar-family-400.webp",
+        "prayer-altar-family-800.webp",
+        "prayer-altar-family-1200.webp",
+        "prayer-altar-family-1600.webp",
+        "prayer-altar-family-800.jpg",
+        "prayer-altar-family-share.jpg"
+      ]
+    },
+    "ensenada-prayer-kneeling": {
+      "stamp": "219933-1792609791689",
+      "width": 2048,
+      "height": 1536,
+      "webp": {
+        "400": "ensenada-prayer-kneeling-400.webp",
+        "800": "ensenada-prayer-kneeling-800.webp",
+        "1200": "ensenada-prayer-kneeling-1200.webp",
+        "1600": "ensenada-prayer-kneeling-1600.webp"
+      },
+      "jpg": "ensenada-prayer-kneeling-800.jpg",
+      "share": null,
+      "files": [
+        "ensenada-prayer-kneeling-400.webp",
+        "ensenada-prayer-kneeling-800.webp",
+        "ensenada-prayer-kneeling-1200.webp",
+        "ensenada-prayer-kneeling-1600.webp",
+        "ensenada-prayer-kneeling-800.jpg"
+      ]
+    },
+    "baptism-01": {
+      "stamp": "199987-1792722866977",
+      "width": 1600,
+      "height": 900,
+      "webp": {
+        "400": "baptism-01-400.webp",
+        "800": "baptism-01-800.webp",
+        "1200": "baptism-01-1200.webp",
+        "1600": "baptism-01-1600.webp"
+      },
+      "jpg": "baptism-01-800.jpg",
+      "share": "baptism-01-share.jpg",
+      "files": [
+        "baptism-01-400.webp",
+        "baptism-01-800.webp",
+        "baptism-01-1200.webp",
+        "baptism-01-1600.webp",
+        "baptism-01-800.jpg",
+        "baptism-01-share.jpg"
+      ]
+    },
+    "baptism-02": {
+      "stamp": "138061-1792722867489|crop:0,15,1600,885",
+      "width": 1600,
+      "height": 885,
+      "webp": {
+        "400": "baptism-02-400.webp",
+        "800": "baptism-02-800.webp",
+        "1200": "baptism-02-1200.webp",
+        "1600": "baptism-02-1600.webp"
+      },
+      "jpg": "baptism-02-800.jpg",
+      "share": null,
+      "files": [
+        "baptism-02-400.webp",
+        "baptism-02-800.webp",
+        "baptism-02-1200.webp",
+        "baptism-02-1600.webp",
+        "baptism-02-800.jpg"
+      ]
+    },
+    "baptism-03": {
+      "stamp": "137335-1792722867836|crop:420,135,440,330",
+      "width": 440,
+      "height": 330,
+      "webp": {
+        "400": "baptism-03-400.webp",
+        "440": "baptism-03-440.webp"
+      },
+      "jpg": "baptism-03-440.jpg",
+      "share": null,
+      "files": [
+        "baptism-03-400.webp",
+        "baptism-03-440.webp",
+        "baptism-03-440.jpg"
+      ]
+    },
+    "baptism-04": {
+      "stamp": "152401-1792722868150|crop:498,125,500,375",
+      "width": 500,
+      "height": 375,
+      "webp": {
+        "400": "baptism-04-400.webp",
+        "500": "baptism-04-500.webp"
+      },
+      "jpg": "baptism-04-500.jpg",
+      "share": null,
+      "files": [
+        "baptism-04-400.webp",
+        "baptism-04-500.webp",
+        "baptism-04-500.jpg"
+      ]
+    },
+    "baptism-05": {
+      "stamp": "2672424-1793237959799",
+      "width": 2752,
+      "height": 1536,
+      "webp": {
+        "400": "baptism-05-400.webp",
+        "800": "baptism-05-800.webp",
+        "1200": "baptism-05-1200.webp",
+        "1600": "baptism-05-1600.webp"
+      },
+      "jpg": "baptism-05-800.jpg",
+      "share": null,
+      "files": [
+        "baptism-05-400.webp",
+        "baptism-05-800.webp",
+        "baptism-05-1200.webp",
+        "baptism-05-1600.webp",
+        "baptism-05-800.jpg"
+      ]
+    },
+    "baptism-06": {
+      "stamp": "139273-1792723123756",
+      "width": 840,
+      "height": 630,
+      "webp": {
+        "400": "baptism-06-400.webp",
+        "800": "baptism-06-800.webp",
+        "840": "baptism-06-840.webp"
+      },
+      "jpg": "baptism-06-800.jpg",
+      "share": null,
+      "files": [
+        "baptism-06-400.webp",
+        "baptism-06-800.webp",
+        "baptism-06-840.webp",
+        "baptism-06-800.jpg"
+      ]
+    },
+    "baptism-07": {
+      "stamp": "140007-1792722869270|crop:0,0,720,540",
+      "width": 720,
+      "height": 540,
+      "webp": {
+        "400": "baptism-07-400.webp",
+        "720": "baptism-07-720.webp"
+      },
+      "jpg": "baptism-07-720.jpg",
+      "share": null,
+      "files": [
+        "baptism-07-400.webp",
+        "baptism-07-720.webp",
+        "baptism-07-720.jpg"
+      ]
+    },
+    "baptism-08": {
+      "stamp": "2184148-1793241461191|crop:262,0,2049,1536",
+      "width": 2049,
+      "height": 1536,
+      "webp": {
+        "400": "baptism-08-400.webp",
+        "800": "baptism-08-800.webp",
+        "1200": "baptism-08-1200.webp",
+        "1600": "baptism-08-1600.webp"
+      },
+      "jpg": "baptism-08-800.jpg",
+      "share": null,
+      "files": [
+        "baptism-08-400.webp",
+        "baptism-08-800.webp",
+        "baptism-08-1200.webp",
+        "baptism-08-1600.webp",
+        "baptism-08-800.jpg"
+      ]
+    },
+    "baptism-09": {
+      "stamp": "254143-1793312787087|crop:0,330,1200,900",
+      "width": 1200,
+      "height": 900,
+      "webp": {
+        "400": "baptism-09-400.webp",
+        "800": "baptism-09-800.webp",
+        "1200": "baptism-09-1200.webp"
+      },
+      "jpg": "baptism-09-800.jpg",
+      "share": null,
+      "files": [
+        "baptism-09-400.webp",
+        "baptism-09-800.webp",
+        "baptism-09-1200.webp",
+        "baptism-09-800.jpg"
+      ]
+    },
+    "baptism-10": {
+      "stamp": "205257-1793312887258|crop:445,330,900,675",
+      "width": 900,
+      "height": 675,
+      "webp": {
+        "400": "baptism-10-400.webp",
+        "800": "baptism-10-800.webp",
+        "900": "baptism-10-900.webp"
+      },
+      "jpg": "baptism-10-800.jpg",
+      "share": null,
+      "files": [
+        "baptism-10-400.webp",
+        "baptism-10-800.webp",
+        "baptism-10-900.webp",
+        "baptism-10-800.jpg"
+      ]
+    },
+    "children-01": {
+      "stamp": "274079-1792790777403",
+      "width": 1600,
+      "height": 1200,
+      "webp": {
+        "400": "children-01-400.webp",
+        "800": "children-01-800.webp",
+        "1200": "children-01-1200.webp",
+        "1600": "children-01-1600.webp"
+      },
+      "jpg": "children-01-800.jpg",
+      "share": "children-01-share.jpg",
+      "files": [
+        "children-01-400.webp",
+        "children-01-800.webp",
+        "children-01-1200.webp",
+        "children-01-1600.webp",
+        "children-01-800.jpg",
+        "children-01-share.jpg"
+      ]
+    },
+    "children-02": {
+      "stamp": "271265-1792790777646",
+      "width": 900,
+      "height": 1600,
+      "webp": {
+        "400": "children-02-400.webp",
+        "800": "children-02-800.webp",
+        "900": "children-02-900.webp"
+      },
+      "jpg": "children-02-800.jpg",
+      "share": null,
+      "files": [
+        "children-02-400.webp",
+        "children-02-800.webp",
+        "children-02-900.webp",
+        "children-02-800.jpg"
+      ]
+    },
+    "children-03": {
+      "stamp": "335751-1792790777885",
+      "width": 1920,
+      "height": 1080,
+      "webp": {
+        "400": "children-03-400.webp",
+        "800": "children-03-800.webp",
+        "1200": "children-03-1200.webp",
+        "1600": "children-03-1600.webp"
+      },
+      "jpg": "children-03-800.jpg",
+      "share": null,
+      "files": [
+        "children-03-400.webp",
+        "children-03-800.webp",
+        "children-03-1200.webp",
+        "children-03-1600.webp",
+        "children-03-800.jpg"
+      ]
+    },
+    "children-04": {
+      "stamp": "378295-1792790778043",
+      "width": 1600,
+      "height": 1200,
+      "webp": {
+        "400": "children-04-400.webp",
+        "800": "children-04-800.webp",
+        "1200": "children-04-1200.webp",
+        "1600": "children-04-1600.webp"
+      },
+      "jpg": "children-04-800.jpg",
+      "share": null,
+      "files": [
+        "children-04-400.webp",
+        "children-04-800.webp",
+        "children-04-1200.webp",
+        "children-04-1600.webp",
+        "children-04-800.jpg"
+      ]
+    },
+    "children-05": {
+      "stamp": "268339-1792790778259",
+      "width": 900,
+      "height": 1600,
+      "webp": {
+        "400": "children-05-400.webp",
+        "800": "children-05-800.webp",
+        "900": "children-05-900.webp"
+      },
+      "jpg": "children-05-800.jpg",
+      "share": null,
+      "files": [
+        "children-05-400.webp",
+        "children-05-800.webp",
+        "children-05-900.webp",
+        "children-05-800.jpg"
+      ]
+    },
+    "children-06": {
+      "stamp": "237877-1792790778475",
+      "width": 900,
+      "height": 1600,
+      "webp": {
+        "400": "children-06-400.webp",
+        "800": "children-06-800.webp",
+        "900": "children-06-900.webp"
+      },
+      "jpg": "children-06-800.jpg",
+      "share": null,
+      "files": [
+        "children-06-400.webp",
+        "children-06-800.webp",
+        "children-06-900.webp",
+        "children-06-800.jpg"
+      ]
+    },
+    "children-07": {
+      "stamp": "173267-1792790778660",
+      "width": 900,
+      "height": 1600,
+      "webp": {
+        "400": "children-07-400.webp",
+        "800": "children-07-800.webp",
+        "900": "children-07-900.webp"
+      },
+      "jpg": "children-07-800.jpg",
+      "share": null,
+      "files": [
+        "children-07-400.webp",
+        "children-07-800.webp",
+        "children-07-900.webp",
+        "children-07-800.jpg"
+      ]
+    },
+    "baptism-video-1-poster": {
+      "stamp": "57934-1792728770494",
+      "width": 720,
+      "height": 1280,
+      "webp": {
+        "400": "baptism-video-1-poster-400.webp",
+        "720": "baptism-video-1-poster-720.webp"
+      },
+      "jpg": "baptism-video-1-poster-720.jpg",
+      "share": null,
+      "files": [
+        "baptism-video-1-poster-400.webp",
+        "baptism-video-1-poster-720.webp",
+        "baptism-video-1-poster-720.jpg"
+      ]
+    },
+    "baptism-video-2-poster": {
+      "stamp": "73977-1792728819694",
+      "width": 576,
+      "height": 1024,
+      "webp": {
+        "400": "baptism-video-2-poster-400.webp",
+        "576": "baptism-video-2-poster-576.webp"
+      },
+      "jpg": "baptism-video-2-poster-576.jpg",
+      "share": null,
+      "files": [
+        "baptism-video-2-poster-400.webp",
+        "baptism-video-2-poster-576.webp",
+        "baptism-video-2-poster-576.jpg"
+      ]
+    },
+    "children-video-1-poster": {
+      "stamp": "97392-1792791433578",
+      "width": 720,
+      "height": 1280,
+      "webp": {
+        "400": "children-video-1-poster-400.webp",
+        "720": "children-video-1-poster-720.webp"
+      },
+      "jpg": "children-video-1-poster-720.jpg",
+      "share": null,
+      "files": [
+        "children-video-1-poster-400.webp",
+        "children-video-1-poster-720.webp",
+        "children-video-1-poster-720.jpg"
+      ]
+    },
+    "children-video-2-poster": {
+      "stamp": "121185-1793243732983",
+      "width": 720,
+      "height": 1280,
+      "webp": {
+        "400": "children-video-2-poster-400.webp",
+        "720": "children-video-2-poster-720.webp"
+      },
+      "jpg": "children-video-2-poster-720.jpg",
+      "share": null,
+      "files": [
+        "children-video-2-poster-400.webp",
+        "children-video-2-poster-720.webp",
+        "children-video-2-poster-720.jpg"
+      ]
+    },
+    "children-video-3-poster": {
+      "stamp": "92749-1792791433919",
+      "width": 1280,
+      "height": 720,
+      "webp": {
+        "400": "children-video-3-poster-400.webp",
+        "720": "children-video-3-poster-720.webp"
+      },
+      "jpg": "children-video-3-poster-800.jpg",
+      "share": null,
+      "files": [
+        "children-video-3-poster-400.webp",
+        "children-video-3-poster-720.webp",
+        "children-video-3-poster-800.jpg"
+      ]
+    },
+    "children-video-4-poster": {
+      "stamp": "76176-1792791434098",
+      "width": 1280,
+      "height": 720,
+      "webp": {
+        "400": "children-video-4-poster-400.webp",
+        "720": "children-video-4-poster-720.webp"
+      },
+      "jpg": "children-video-4-poster-800.jpg",
+      "share": null,
+      "files": [
+        "children-video-4-poster-400.webp",
+        "children-video-4-poster-720.webp",
+        "children-video-4-poster-800.jpg"
+      ]
+    },
+    "children-video-5-poster": {
+      "stamp": "87009-1792791434237",
+      "width": 1280,
+      "height": 720,
+      "webp": {
+        "400": "children-video-5-poster-400.webp",
+        "720": "children-video-5-poster-720.webp"
+      },
+      "jpg": "children-video-5-poster-800.jpg",
+      "share": null,
+      "files": [
+        "children-video-5-poster-400.webp",
+        "children-video-5-poster-720.webp",
+        "children-video-5-poster-800.jpg"
+      ]
+    },
+    "ensenada-worship-song-poster": {
+      "stamp": "225119-1793304857383",
+      "width": 1920,
+      "height": 1080,
+      "webp": {
+        "400": "ensenada-worship-song-poster-400.webp",
+        "720": "ensenada-worship-song-poster-720.webp"
+      },
+      "jpg": "ensenada-worship-song-poster-800.jpg",
+      "share": null,
+      "files": [
+        "ensenada-worship-song-poster-400.webp",
+        "ensenada-worship-song-poster-720.webp",
+        "ensenada-worship-song-poster-800.jpg"
+      ]
+    }
+  },
+  "videos": {
+    "baptism-video-1": {
+      "stamp": "1969493-1792728702382|57934-1792728770494",
+      "file": "video/baptism-video-1.mp4",
+      "width": 720,
+      "height": 1280,
+      "duration": 7,
+      "bytes": 1219665,
+      "poster": "baptism-video-1-poster"
+    },
+    "baptism-video-2": {
+      "stamp": "1804986-1792729611810|73977-1792728819694",
+      "file": "video/baptism-video-2.mp4",
+      "width": 576,
+      "height": 1024,
+      "duration": 9,
+      "bytes": 1481345,
+      "poster": "baptism-video-2-poster"
+    },
+    "children-video-1": {
+      "stamp": "6047647-1792791299394|97392-1792791433578",
+      "file": "video/children-video-1.mp4",
+      "width": 720,
+      "height": 1280,
+      "duration": 28,
+      "bytes": 4710474,
+      "poster": "children-video-1-poster"
+    },
+    "children-video-2": {
+      "stamp": "6927108-1792791419193|121185-1793243732983",
+      "file": "video/children-video-2.mp4",
+      "width": 720,
+      "height": 1280,
+      "duration": 28,
+      "bytes": 4718143,
+      "poster": "children-video-2-poster"
+    },
+    "children-video-3": {
+      "stamp": "737846-1792791425073|92749-1792791433919",
+      "file": "video/children-video-3.mp4",
+      "width": 1280,
+      "height": 720,
+      "duration": 7,
+      "bytes": 737845,
+      "poster": "children-video-3-poster"
+    },
+    "children-video-4": {
+      "stamp": "1822947-1792791428422|76176-1792791434098",
+      "file": "video/children-video-4.mp4",
+      "width": 1280,
+      "height": 720,
+      "duration": 16,
+      "bytes": 1822946,
+      "poster": "children-video-4-poster"
+    },
+    "children-video-5": {
+      "stamp": "1989486-1792791433422|87009-1792791434237",
+      "file": "video/children-video-5.mp4",
+      "width": 1280,
+      "height": 720,
+      "duration": 25,
+      "bytes": 1989485,
+      "poster": "children-video-5-poster"
+    },
+    "ensenada-worship-song": {
+      "stamp": "787652697-1792603883000|225119-1793304857383",
+      "file": "video/ensenada-worship-song.mp4",
+      "width": 1280,
+      "height": 720,
+      "duration": 241,
+      "bytes": 25031291,
+      "poster": "ensenada-worship-song-poster"
+    }
+  },
+  "graphics": {
+    "logo": {
+      "width": 940,
+      "height": 880,
+      "files": [
+        "logo-64.webp",
+        "logo-128.webp",
+        "logo-192.webp",
+        "icon-32.png",
+        "apple-touch-icon.png",
+        "icon-512.png"
+      ]
+    },
+    "sword": {
+      "upright": {
+        "file": "sword-upright.webp",
+        "width": 36,
+        "height": 112
+      },
+      "flat": {
+        "file": "sword-flat.webp",
+        "width": 360,
+        "height": 115
+      }
+    }
+  }
+}
